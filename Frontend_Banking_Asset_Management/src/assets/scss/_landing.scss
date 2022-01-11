@@ -1,0 +1,31 @@
+.sectionContainerLanding {
+  width: 70%;
+  height: 100vh;
+  margin: 10rem auto;
+  padding: 10rem;
+  padding-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+
+  color: rgb(0, 0, 0);
+  /*  background-color: #b5e5cf; */
+  background-color: rgb(236, 246, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* body {
+  background-color: #3d5b59;
+} */
+
+.bannerImg {
+  width: 90%;
+  height: 30%;
+  background-size: auto;
+}
+
+.banner {
+  background-image: url("../../assets/images/assetmanagement1.jpeg");
+  background-size: auto;
+  background-position: center center;
+  height: 30%;
+}
