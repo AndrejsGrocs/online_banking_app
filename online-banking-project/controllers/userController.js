@@ -1,23 +1,26 @@
+const { PinEncryptor } = require("pin-encryptor");
 const bcrypt = require("bcrypt");
 const User = require("./../models/User");
 const authenticationHelper = require("./../helpers/authenticationHelper");
 const balanceMath = require("./../helpers/balanceMath");
 
 exports.registerUser = async (req, res) => {
+  console.log("hello");
+
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const p = PinEncryptor.format1("1529", "123456789177");
+    console.log(p, p.length);
+    const user = await new User();
 
-    const user = new User();
-
-    user.firstname = req.body.firstname;
     user.lastname = req.body.lastname;
+    user.firstname = req.body.firstname;
     user.email = req.body.email;
     user.password = hashedPassword;
-    user.PIN = req.body.PIN;
+    user.PIN = p;
 
     await user.save();
-
-    return res.status(200).json({ message: "User Created" });
+    return res.status(200).json({ message: "User Created", user });
   } catch (error) {
     return res
       .status(400)
@@ -25,7 +28,6 @@ exports.registerUser = async (req, res) => {
   }
 };
 exports.login = async (req, res) => {
-  // const jwt = authenticationHelper.generateToken();
   const user = await User.findOne({ email: req.body.email, PIN: req.body.PIN });
 
   if (user == null) {
@@ -38,8 +40,6 @@ exports.login = async (req, res) => {
     var checkPassword = await bcrypt.compare(req.body.password, user.password);
 
     if (checkPassword) {
-      //password is matching
-      //Generate JWT token here
       const token = authenticationHelper.generateToken(user);
 
       return res
@@ -132,19 +132,8 @@ exports.deleteUser = async (req, res) => {
 };
 
 exports.logout = async (req, res) => {
-  console.log("llaallo");
   try {
-    const user = await User.findById(
-      req.body.user._id
-
-      // { new: true }
-    );
-
-    res.clearCookie("jwt");
-
-    //const timeOutToken = authenticationHelper.deleteToken(user);
-    console.log(timeOutToken);
-    //return res.status(200).json({ token: timeOutToken });
+    res.clearCookie("jwt").json({ message: "you are logged out now!" });
   } catch {
     res
       .status(400)
