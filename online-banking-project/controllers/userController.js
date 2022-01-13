@@ -6,10 +6,15 @@ const balanceMath = require("./../helpers/balanceMath");
 
 exports.registerUser = async (req, res) => {
   console.log("hello");
+  console.log(req.body.PIN);
 
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    const p = PinEncryptor.format1("1529", "123456789177");
+    const PIN = req.body.PIN;
+    console.log(PIN);
+    const formattedPIN = await PinEncryptor.format2(PIN.toString());
+    const p = await bcrypt.hash(formattedPIN, 10);
+
     console.log(p, p.length);
     const user = await new User();
 
@@ -22,13 +27,14 @@ exports.registerUser = async (req, res) => {
     await user.save();
     return res.status(200).json({ message: "User Created", user });
   } catch (error) {
+    console.log(error);
     return res
       .status(400)
       .json({ message: "Something went wrong creating the user", error });
   }
 };
 exports.login = async (req, res) => {
-  const user = await User.findOne({ email: req.body.email, PIN: req.body.PIN });
+  const user = await User.findOne({ email: req.body.email });
 
   if (user == null) {
     return res
@@ -37,9 +43,13 @@ exports.login = async (req, res) => {
   }
 
   try {
-    var checkPassword = await bcrypt.compare(req.body.password, user.password);
+    let checkPassword = await bcrypt.compare(req.body.password, user.password);
+    let checkPIN = await bcrypt.compare(
+      PinEncryptor.format2(req.body.PIN.toString()),
+      user.PIN
+    );
 
-    if (checkPassword) {
+    if (checkPassword && checkPIN) {
       const token = authenticationHelper.generateToken(user);
 
       return res

@@ -15,7 +15,7 @@ const userSchema = new Schema({
     required: true,
   },
   PIN: {
-    type: Number,
+    type: String,
     required: true,
   },
   accountBalance: {
