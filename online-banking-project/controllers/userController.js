@@ -151,22 +151,3 @@ exports.logout = async (req, res) => {
   }
 };
 
-exports.profile = async (req, res) => {
-
-  
-  try {
-    console.log(req.user)
-    const user = await User.find().select(
-      "firstname lastname email"
-    );
-
-    return res.status(200).json({ message: "User Info", user });
-  } catch (error) {
-    console.log("The error is ", error);
-
-    return res
-      .status(400)
-      .json({ message: "Something went wrong creating user", error: error });
-  }
-
-};
