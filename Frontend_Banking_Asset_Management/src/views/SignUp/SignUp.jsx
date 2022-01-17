@@ -1,5 +1,6 @@
 import React from 'react'
-import axios from '../../util/axiosInstance'
+/* import axios from "../../util/axiosInstance"; */
+import axios from 'axios'
 import { useState} from 'react' 
 import {Link, useNavigate} from 'react-router-dom'
 import FormWrapper from '../../components/Common/Wrapper/wrapper'
@@ -21,14 +22,15 @@ export default function SignUp() {
           const data = {
           firstname:formData.get("firstname"),//get the data from the input with name firstname
           lastname:formData.get("lastname"),//get the data from the input with name lastname
-          username:formData.get('username'),//get the data from the input with name username
           email: formData.get("email"),//...
           password: formData.get("password"),
+          PIN:formData.get("PIN")
         };
 
          try {
-           const response = await axios.post("/signup", data); 
-           
+              
+           const response = await axios.post("http://localhost:3001/api/user/register", data, {withCredentials:true}); 
+           console.log(response)
            if(response.status === 200){
                //everything went well! 
                console.log("user was created");
@@ -61,10 +63,6 @@ export default function SignUp() {
                   <input type="text" name="lastname"   className="form-control" placeholder="Last name" />
               </div>
   
-              <div className="form-group">
-                  <label>Username</label>
-                  <input type="text"  name="username"  className="form-control" placeholder="Username" />
-              </div>
   
               <div className="form-group">
                   <label>Email address</label>
@@ -75,11 +73,12 @@ export default function SignUp() {
                   <label>Password</label>
                   <input type="password" name="password" className="form-control" placeholder="Enter password" />
               </div>
-  
-              <div className="form-group">
-                  <label>Re-Password</label>
-                  <input type="password" name="repassword" className="form-control" placeholder="Enter password" />
+
+               <div className="form-group">
+                  <label>PIN</label>
+                  <input type="PIN" name="PIN" className="form-control" placeholder="Enter PIN" />
               </div>
+  
               <ErrorMessage isVisible={isError} errorMessage={errorMessage} />
               <button className="btn btn-primary btn-block">Sign Up</button>
               <p className="forgot-password text-right">

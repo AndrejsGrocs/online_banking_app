@@ -16,6 +16,7 @@ export default function Navbar() {
         <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
         <li><Link to='/login' exact activeClassName='active'> Login</Link></li>
         <li><Link to='/signup' exact activeClassName='active'> Sign Up</Link></li>
+        <li><Link to='/profile' exact activeClassName='active'> Profile</Link></li>
 
         </ul>
 

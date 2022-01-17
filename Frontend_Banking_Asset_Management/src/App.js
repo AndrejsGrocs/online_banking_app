@@ -9,10 +9,30 @@ export const AppContext = createContext({
     handleLogin: ()=>{},
 })
 
+
+
 export default function App() {
+    
+    const [user, setUser] = useState({});
+    console.log(user,'From App')
+  const [loggedIn, setLoggedIn] = useState('');
+  const handleLogin = (_user) => {
+    if (_user) {
+      setUser(_user);
+      setLoggedIn(true);
+    } else {
+      setUser("");
+      setLoggedIn(false);
+    }
+  };
     return (
+
+        <AppContext.Provider value={{handleLogin, user}}>
         <div>
             <MainRouter />
         </div>
+        </AppContext.Provider>
     )
 }
+
+

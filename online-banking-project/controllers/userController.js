@@ -6,23 +6,23 @@ const balanceMath = require("./../helpers/balanceMath");
 
 exports.registerUser = async (req, res) => {
   console.log("hello");
-  console.log(req.body.PIN);
+ /*  console.log(req.body.PIN); */
 
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    const PIN = req.body.PIN;
-    console.log(PIN);
+     const PIN = req.body.PIN; 
+    console.log(PIN); 
     const formattedPIN = await PinEncryptor.format2(PIN.toString());
-    const p = await bcrypt.hash(formattedPIN, 10);
+    const p = await bcrypt.hash(formattedPIN, 10); 
 
-    console.log(p, p.length);
+    /* console.log(p, p.length); */
     const user = await new User();
 
     user.lastname = req.body.lastname;
     user.firstname = req.body.firstname;
     user.email = req.body.email;
     user.password = hashedPassword;
-    user.PIN = p;
+    user.PIN = p; 
 
     await user.save();
     return res.status(200).json({ message: "User Created", user });
@@ -59,7 +59,7 @@ exports.login = async (req, res) => {
           secure: false,
           sameSite: "lax",
         })
-        .json({ message: "login successful!", token });
+        .json({ message: "login successful!", token, user });
     } else {
       return res.status(400).json({ message: "Passwords not matching" });
     }
@@ -149,4 +149,24 @@ exports.logout = async (req, res) => {
       .status(400)
       .json({ error: "Logout did not work, please logout again." });
   }
+};
+
+exports.profile = async (req, res) => {
+
+  
+  try {
+    console.log(req.user)
+    const user = await User.find().select(
+      "firstname lastname email"
+    );
+
+    return res.status(200).json({ message: "User Info", user });
+  } catch (error) {
+    console.log("The error is ", error);
+
+    return res
+      .status(400)
+      .json({ message: "Something went wrong creating user", error: error });
+  }
+
 };
