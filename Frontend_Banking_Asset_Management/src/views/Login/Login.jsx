@@ -27,7 +27,7 @@ export default function Login() {
               
               ///??????????
               handleLogin(response.data.user)
-              navigate('list-users')
+              navigate('/profile')
           }catch (error){
               /* setIsError(true)
               setErrorMessage(error.response.data) */

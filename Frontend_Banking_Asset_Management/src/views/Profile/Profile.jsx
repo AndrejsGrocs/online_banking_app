@@ -31,6 +31,7 @@ export default function Profile(){
 
     return (
       <>
+      <h1>Profile</h1>
         {
             user != null 
             ?
@@ -39,6 +40,7 @@ export default function Profile(){
             <h1>{user.firstname} {user.lastname}</h1>
             <h3>{user.username}</h3>
             <h4>{user.email}</h4>
+            <h4>{user.accountBalance}</h4>
             </>
             :
             <p>No user found</p>

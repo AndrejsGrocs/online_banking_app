@@ -6,6 +6,7 @@ import AboutUs from '../views/AboutUs/AboutUs'
 import Analytics from '../views/Analytics/Analytics'
 import Landing from '../views/Landing/Landing'
 import Login from '../views/Login/Login'
+import Logout from '../../src/views/Logout/Logout'
 import Profile from '../views/Profile/Profile'
 import SignUp from '../views/SignUp/SignUp'
 
@@ -27,6 +28,7 @@ export default function MainRouter() {
               <Route path='/login' element={<Login/>}/>
               <Route path='/signup' element={<SignUp/>}/>
               <Route path='/profile' element={<Profile/>}/>
+              <Route path='/logout' element={<Logout/>}/>
 
 
 
