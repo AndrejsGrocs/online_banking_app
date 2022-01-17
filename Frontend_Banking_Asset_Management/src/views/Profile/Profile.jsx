@@ -30,23 +30,26 @@ export default function Profile(){
 
 
     return (
-      <>
+      <div className="profile-page">
       <h1>Profile</h1>
         {
             user != null 
             ?
             <>
-            <h1>{user._id}</h1>
-            <h1>{user.firstname} {user.lastname}</h1>
+            
+            <h1>Name: {user.firstname} {user.lastname}</h1>
+            <h2>ID: {user._id}</h2>
             <h3>{user.username}</h3>
-            <h4>{user.email}</h4>
-            <h4>{user.accountBalance}</h4>
+            <h2>Email: {user.email}</h2>
+            <h2>Account Balance: {user.accountBalance}</h2>
+            <button>Assets and Investment</button>
             </>
             :
             <p>No user found</p>
   
+           
         }
   
-      </>
+      </div>
     )
 }
