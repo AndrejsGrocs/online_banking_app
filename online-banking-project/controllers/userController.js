@@ -61,7 +61,9 @@ exports.login = async (req, res) => {
         })
         .json({ message: "login successful!", token });
     } else {
-      return res.status(400).json({ message: "Passwords not matching" });
+      return res
+        .status(400)
+        .json({ message: "Passwords and/or PIN not matching" });
     }
   } catch (error) {
     console.log("the error ", error);
