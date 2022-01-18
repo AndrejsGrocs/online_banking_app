@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext, useState } from 'react'
 import {AppContext} from '../../App'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import axios from "../../util/axiosInstance"; 
 import FormWrapper from '../../components/Common/Wrapper/wrapper'
 import ErrorMessage from '../../components/Common/ErrorMessage/errorMessage'
 
@@ -17,18 +17,21 @@ export default function Login() {
           const formData = new FormData(event.target)
           const data = {
               email: formData.get('email'),
-              password: formData.get('password')
+              password: formData.get('password'),
+              PIN:formData.get('pin')
           }
           try{
               ///?????????????
-              const response = await axios.post('/login', data)
+              const response = await axios.post('/api/user/login', data)
+             
               
               ///??????????
-              handleLogin(response.data.user.username)
-              navigate('list-users')
+              handleLogin(response.data.user)
+              navigate('/profile')
           }catch (error){
-              setIsError(true)
-              setErrorMessage(error.response.data.message)
+              /* setIsError(true)
+              setErrorMessage(error.response.data) */
+              console.log(error)
 
           }
       }
@@ -50,6 +53,11 @@ export default function Login() {
                <label>
                  Password
                  <input name='password' type='password' required={true}/>
+               </label>
+
+               <label>
+                 PIN
+                 <input name='pin' type='pin' required={true}/>
                </label>
                  
                  <label>
