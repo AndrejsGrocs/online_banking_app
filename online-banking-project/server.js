@@ -13,7 +13,12 @@ app.set("port", process.env.PORT || 3001);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+cors({
+credentials: true,
+origin: true,
+})
+); 
 app.use(passport.initialize());
 
 const initializePassport = require("./passport-config");
