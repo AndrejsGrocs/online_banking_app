@@ -1,6 +1,6 @@
-.sectionContainerLanding {
-  width: 70%;
-  height: 100vh;
+.Landing {
+  width: 80%;
+  height: 500vh;
   margin: 10rem auto;
   padding: 10rem;
   padding-top: 1rem;
@@ -13,9 +13,9 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* body {
+body {
   background-color: #3d5b59;
-} */
+}
 
 .bannerImg {
   width: 90%;
@@ -24,8 +24,12 @@
 }
 
 .banner {
+  width: 90%;
+  text-align: center;
   background-image: url("../../assets/images/assetmanagement1.jpeg");
   background-size: auto;
   background-position: center center;
-  height: 30%;
+  /* background-repeat: no-repeat; */
+  height: 10%;
+  margin: 0 auto;
 }
