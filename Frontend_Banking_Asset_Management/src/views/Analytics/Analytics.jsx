@@ -4,7 +4,7 @@ import image1 from '../../assets/images/assetmanagement1.jpeg'
 export default function Analytics() {
     return (
         <div className='sectionContainer'>
-        <div className='banner'>
+        <div className='banner-2'>
             <h1>Banner</h1>
         </div>
          {/* <img className='bannerImg'
