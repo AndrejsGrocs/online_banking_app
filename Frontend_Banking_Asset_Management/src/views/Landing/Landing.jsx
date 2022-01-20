@@ -2,6 +2,7 @@ import React from 'react'
 import image1 from '../../assets/images/assetmanagement1.jpeg'
 import BankPriorities from '../BankPriorities/BankPriorities'
 import CreditCards from '../CreditCards/CreditCrads'
+import Investment from '../InvestmentAssets/InvestmentAssets'
 import Loan from '../Loan/Loan'
 import SiteMapAndContacts from '../SiteMapAndContacts/SiteMapAndContacts'
 
@@ -19,7 +20,9 @@ export default function Landing() {
             <BankPriorities/>
             <CreditCards/>
             <Loan/>
+            <Investment/>
             <SiteMapAndContacts/>
+            
         </div>
         
            

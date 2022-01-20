@@ -10,33 +10,51 @@ export default function Navbar() {
     
     return (
         <nav className='nav'>
-        <div>
-            React Asset Management
+        <div className='bank-logo-section'>
+           <a className='bank-logo' href="/">Bank Logo</a>   
         </div>
 
         <ul className='nav-list'>
         {loggedIn?( 
             <>
-            <li><Link to='/' exact activeClassName='active'> News</Link></li>
-        <li><Link to='/analytics' exact activeClassName='active'> Analytics</Link></li>
+            <li><Link to='/' exact activeClassName='active'> Bank</Link></li>
+        <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
+        <li><Link to='/analytics' exact activeClassName='active'> Investment</Link></li>
+        <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
         <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
             <li><Link to='/profile' exact activeClassName='active'> Profile</Link></li>
-        <li><Link to='/logout' exact activeClassName='active'> Logout</Link></li>
+        
           
                </>
         ):(
             <>
-        <li><Link to='/' exact activeClassName='active'> News</Link></li>
-        <li><Link to='/analytics' exact activeClassName='active'> Analytics</Link></li>
+        <li><Link to='/' exact activeClassName='active'> Bank</Link></li>
+        <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
+        <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
+        <li><Link to='/analytics' exact activeClassName='active'> Investment</Link></li>
+        
         <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
-        <li><Link to='/login' exact activeClassName='active'> Login</Link></li>
-        <li><Link to='/signup' exact activeClassName='active'> Sign Up</Link></li>
+        
+       
         </>
 
         )}
         
-
+       
         </ul>
+        {!loggedIn?(
+<div className='nav-buttons-section'> 
+        <li><button className='button-nav'><Link className='button-link' to='/login' exact activeClassName='active'> Login</Link></button></li>
+        <li><button className='button-nav'><Link className='button-link' to='/signup' exact activeClassName='active'> Sign Up</Link></button></li>
+        </div>
+
+
+        ):(
+            <div className='nav-buttons-section'>
+            <button className='button-nav'><Link className='button-link' to='/logout' exact activeClassName='active'> Logout</Link></button>
+            </div>
+        )}
+          
 
         </nav>
     )

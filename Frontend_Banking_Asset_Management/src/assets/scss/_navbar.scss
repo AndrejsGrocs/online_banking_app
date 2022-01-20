@@ -20,7 +20,8 @@
   list-style: none;
   display: flex;
   width: 30%;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  margin: 0 auto;
   justify-content: space-around;
 
   li a {
@@ -31,4 +32,31 @@
   .active {
     font-weight: 700;
   }
+}
+
+.button-nav {
+  background-color: rgb(171, 74, 196);
+}
+
+.button-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-buttons-section {
+  list-style: none;
+  display: flex;
+  width: 17%;
+  font-size: 1rem;
+
+  justify-content: space-around;
+}
+
+.bank-logo-section {
+  width: 17%;
+}
+
+.bank-logo {
+  text-decoration: none;
+  color: white;
 }
