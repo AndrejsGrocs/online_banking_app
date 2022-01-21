@@ -7,7 +7,10 @@ function Loan() {
             <div className='bppflex'>
             <h1 className='bpph1'>Loan Page</h1>
             <p className='bppp1'>Most banks use your money and invest it in guns, coal and other harmful industries - without your consent. We only invest your money sustainably.</p>
-            <button className='section-button' type="button">Click Me!</button>
+            <button className='section-button' type="button" type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/loan';
+      }}>Click Me!</button>
             </div>
             <img className='section-image' src={susecoimage} />
         </div>

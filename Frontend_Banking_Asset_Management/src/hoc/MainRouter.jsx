@@ -13,6 +13,7 @@ import BankPrioritiesPage from '../views/BankPrioritiesPage/BankPrioritiesPage'
 import AccountPage from '../views/AccountPage/AccountPage'
 import Investment from '../views/InvestmentAssets/InvestmentAssets'
 import InvestmentPage from '../views/InvestmentPage/InvestmentPage'
+import LoanPage from '../views/LoanPage/LoanPage'
 
 export default function MainRouter() {
     return (
@@ -27,9 +28,10 @@ export default function MainRouter() {
         
         <Routes>
               <Route path='/' element = {<Landing/>}/>
-              <Route path='/investment' element = {<InvestmentPage/>}/>
               <Route path='/mission' element = {<BankPrioritiesPage/>}/>
               <Route path='/account' element = {<AccountPage/>}/>
+              <Route path='/loan' element = {<LoanPage/>}/>
+              <Route path='/investment' element = {<InvestmentPage/>}/>
               <Route path='/aboutus' element={<AboutUs/>}/>
               <Route path='/login' element={<Login/>}/>
               <Route path='/signup' element={<SignUp/>}/>
