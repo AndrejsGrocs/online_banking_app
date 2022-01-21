@@ -48,10 +48,10 @@ export default function SignUp() {
 
     return (
         <FormWrapper>
-        <div className='sectionContainer'>
-            <h1>This is Sign Up page</h1>
-            <h2>Here you can Sign Up</h2>
-            <form onSubmit={handleSubmit}>
+        <div className='sign-up-page'>
+            
+            
+            <form className='form-div' onSubmit={handleSubmit}>
         <h3>Sign Up</h3>
               <div className="form-group">
                   <label>First name</label>
@@ -75,7 +75,7 @@ export default function SignUp() {
               </div>
 
                <div className="form-group">
-                  <label>PIN</label>
+                  <label>Pin</label>
                   <input type="PIN" name="PIN" className="form-control" placeholder="Enter PIN" />
               </div>
   
