@@ -2,7 +2,7 @@
   width: 95%;
   height: 320vh;
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-top: 5rem;
   padding-top: 2rem;
   padding: 2rem;
   padding-top: 1rem;
@@ -46,4 +46,49 @@ body {
   /* background-repeat: no-repeat; */
   height: 40%;
   margin: 0 auto;
+}
+
+.section-image {
+  border-radius: 3%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 18vw;
+  height: 38vh;
+}
+.section-button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  font-family: "Comfortaa", cursive;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
+    0px 0px 10px rgba(0, 0, 0, 0.15);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 0) 5%,
+    rgba(255, 255, 255, 0.5) 6%,
+    rgba(255, 255, 255, 0) 9%,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 0) 17%,
+    rgba(255, 255, 255, 0.5) 19%,
+    rgba(255, 255, 255, 0) 21%
+  );
+  background-size: 150%;
+  background-position: right;
+  transition: 1s;
+}
+
+.section-button:hover {
+  background-position: left;
+  color: white;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.section-button:focus {
+  outline: none;
 }

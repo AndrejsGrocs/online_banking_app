@@ -19,7 +19,7 @@ export default function Navbar() {
             <>
             <li><Link to='/' exact activeClassName='active'> Bank</Link></li>
         <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
-        <li><Link to='/analytics' exact activeClassName='active'> Investment</Link></li>
+        <li><Link to='/investment' exact activeClassName='active'>Investment</Link></li>
         <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
         <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
             <li><Link to='/profile' exact activeClassName='active'> Profile</Link></li>
@@ -31,8 +31,7 @@ export default function Navbar() {
         <li><Link to='/' exact activeClassName='active'> Bank</Link></li>
         <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
         <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
-        <li><Link to='/analytics' exact activeClassName='active'> Investment</Link></li>
-        
+        <li><Link to='/investment' exact activeClassName='active'>Investment</Link></li>
         <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
         
        
