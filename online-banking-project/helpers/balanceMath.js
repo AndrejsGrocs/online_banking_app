@@ -1,4 +1,4 @@
-exports.balanceCalculator = (user, accountBalance) => {
-  const balance = (user.accountBalance += accountBalance);
+exports.balanceCalculator = (user, changeAccountBalance) => {
+  const balance = (user.accountBalance += changeAccountBalance);
   return balance;
 };

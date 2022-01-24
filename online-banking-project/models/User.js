@@ -4,7 +4,7 @@ const userSchema = new Schema({
   createdOn: { type: Date, required: true, default: Date.now },
   firstname: { type: String, required: true },
   lastname: { type: String, required: true },
-  // username: { type: String, required: true, unique: true },
+  accountNumber: { type: String, unique: true },
   email: {
     type: String,
     required: true,
@@ -23,6 +23,7 @@ const userSchema = new Schema({
     required: true,
     default: 0,
   },
+
   // roles: [String],
 });
 
