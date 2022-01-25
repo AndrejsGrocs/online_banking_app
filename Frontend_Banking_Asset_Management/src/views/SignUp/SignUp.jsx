@@ -84,7 +84,7 @@ export default function SignUp() {
               <p className="forgot-password text-right">
                   Already registered 
               </p>
-              <button><Link to="/login">sign in?</Link></button>
+              <button className='button-signup'><Link to="/login">sign in?</Link></button>
   
         </form>
         </div>

@@ -20,20 +20,17 @@ body {
   background-color: #ffffff;
 }
 
-.bannerImg {
-  width: 90%;
-  height: 30%;
-  background-size: auto;
+.bannerContent {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
 .banner {
-  width: 90%;
+  width: 500;
+  height: 700px;
   text-align: center;
-  background-image: url("../../assets/images/assetmanagement1.jpeg");
-  background-size: auto;
-  background-position: center center;
-  /* background-repeat: no-repeat; */
-  height: 20%;
+
   margin: 0 auto;
 }
 
