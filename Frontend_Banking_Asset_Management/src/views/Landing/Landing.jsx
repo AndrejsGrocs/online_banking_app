@@ -16,32 +16,46 @@ export default function Landing() {
     return (
         <div className='Landing'>
 
-        <Carousel infiniteLoop autoPlay emulateTouch={true} transitionTime={1000} showArrows={false} showStatus={false}  showThumbs={false}>
+        <Carousel infiniteLoop autoPlay emulateTouch={true}transitionTime={1000} showArrows={false} showStatus={false}  showThumbs={false}>
          
           <div className='banner'>
                  
-                    <img className='bannerImg' src={image2} />
-                    <div className='bannerContent'>
-                       <p className="bannerText">Legend 1</p>
-                        <button className='bannerText'>Click here</button>
+                   <img className='bannerImg' src={image3} />
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader">Save the ocean environment</h1>
+                       <p className="bannerText">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton'>Click here</button>
                     </div>
-
                     
          </div>
                 <div className='banner'>
                 
-                    <img className='bannerImg' src={image3} />
-                    <p className="">Legend 2</p>
+                   <img className='bannerImg' src={image2} />
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader">Save the ocean environment</h1>
+                       <p className="bannerText">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton'>Click here</button>
+                    </div>
                     
                 </div>
                 <div className='banner'>
                 
                     <img className='bannerImg' src={image4} />
-                    <p className="">Legend 3</p>
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader">Save the ocean environment</h1>
+                       <p className="bannerText">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton'>Click here</button>
+                    </div>
                     
                 </div>
             </Carousel>
-            <h1>Doplhin Bank</h1>
+           
       
         
            

@@ -1,10 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .Landing {
-  width: 95%;
+  width: 96%;
   height: 320vh;
   margin: 0 auto;
-  margin-top: 5rem;
-  padding-top: 2rem;
-  padding: 2rem;
+  margin-top: 3.1rem;
+  //padding-top: 2rem;
+  //padding: 2rem;
   padding-top: 1rem;
   font-size: 1rem;
   text-align: center;
@@ -21,14 +26,18 @@ body {
 }
 
 .bannerContent {
+  display: flex;
+
   position: absolute;
+  justify-content: center;
+  align-items: center;
   top: 0;
   z-index: 1;
 }
 
 .banner {
-  width: 500;
-  height: 700px;
+  width: 100%;
+  height: 800px;
   text-align: center;
 
   margin: 0 auto;
