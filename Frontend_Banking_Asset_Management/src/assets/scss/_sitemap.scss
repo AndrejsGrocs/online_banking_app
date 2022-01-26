@@ -1,4 +1,6 @@
 .sitemap {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(49, 65, 228);
   color: rgb(255, 255, 255);
   width: 100%;
@@ -7,14 +9,30 @@
 }
 
 .list-flex {
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  padding: 10%;
+  padding: 20px;
 }
 
 .link-list {
   list-style-type: none;
 }
 
-/* .link */
+.socmediaicon {
+  width: 50px;
+  height: 50px;
+  margin-top: 80px;
+  margin-bottom: 5px;
+}
+
+.icon-list {
+  margin: 0 auto;
+  text-align: center;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 20px;
+}

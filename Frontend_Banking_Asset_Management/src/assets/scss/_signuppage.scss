@@ -45,6 +45,7 @@
 .button-signup {
   text-decoration: none;
   font-family: Hack, monospace;
+  margin-top: 5px;
   background: #daa5eb;
   color: #1d1d1d;
   cursor: pointer;
@@ -56,7 +57,6 @@
   width: 5vh;
   position: relative;
   width: 140px;
-
   height: 40px;
 
   &::after {
@@ -85,4 +85,8 @@
       color: #ffffff;
     }
   }
+}
+
+.signuplink {
+  text-decoration: none;
 }
