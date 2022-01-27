@@ -1,28 +1,34 @@
 const { PinEncryptor } = require("pin-encryptor");
 const bcrypt = require("bcrypt");
 const User = require("./../models/User");
+const Transaction = require("./../models/Transaction");
 const authenticationHelper = require("./../helpers/authenticationHelper");
 const balanceMath = require("./../helpers/balanceMath");
+const accountNumberHelper = require("./../helpers/accountNumberHelper");
+const transactionsMath = require("./../helpers/transactionsMath");
 
 exports.registerUser = async (req, res) => {
   console.log("hello");
- /*  console.log(req.body.PIN); */
+  /*  console.log(req.body.PIN); */
 
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-     const PIN = req.body.PIN; 
-    console.log(PIN); 
+    const PIN = req.body.PIN;
+    // console.log(PIN);
     const formattedPIN = await PinEncryptor.format2(PIN.toString());
-    const p = await bcrypt.hash(formattedPIN, 10); 
-
+    const hashedPIN = await bcrypt.hash(formattedPIN, 10);
     /* console.log(p, p.length); */
+    const accountNum = await accountNumberHelper.accountNumCreator();
+    console.log(accountNum);
+
     const user = await new User();
 
     user.lastname = req.body.lastname;
     user.firstname = req.body.firstname;
     user.email = req.body.email;
     user.password = hashedPassword;
-    user.PIN = p; 
+    user.PIN = hashedPIN;
+    user.accountNumber = accountNum;
 
     await user.save();
     return res.status(200).json({ message: "User Created", user });
@@ -82,7 +88,7 @@ exports.accountBalance = async (req, res) => {
         // email: body.email,
         accountBalance: balanceMath.balanceCalculator(
           req.user,
-          body.accountBalance
+          body.changeAccountBalance
         ),
       },
       { new: true }
@@ -153,3 +159,68 @@ exports.logout = async (req, res) => {
   }
 };
 
+exports.transaction = async (req, res) => {
+  const { body } = req;
+
+  try {
+    const recipient = await User.findOne({ accountNumber: body.accountNumber });
+
+    if (recipient == null) {
+      res.status(400).json({
+        message:
+          "User with this account number does not exist, please try again.",
+      });
+    }
+
+    await recipient.updateOne({
+      accountBalance: transactionsMath.transactionRecipientBalance(
+        recipient,
+        body.transmittedValue
+      ),
+    });
+
+    // const recipient = await User.findOneAndUpdate(body.accountNumber, {
+    //   accountBalance: transactionsMath.transactionRecipientBalance(
+    //     req.user,
+    //     body.transmittedValue
+    //   ),
+    // });
+
+    const sender = await User.findByIdAndUpdate(req.user._id, {
+      accountBalance: transactionsMath.transactionSenderBalance(
+        req.user,
+        body.transmittedValue
+      ),
+    }); //.populate("firstname lastname");
+
+    const transaction = await Transaction.create({
+      transmittedValue: body.transmittedValue,
+      recipient: recipient._id,
+      sender: req.user._id,
+    });
+    console.log(req.user._id);
+    res.status(200).json({
+      message: "Transaction completed!",
+      transaction,
+      sender,
+      recipient,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({ error: "Transaction not possible" });
+  }
+};
+
+// exports.transactions = async (req, res) => {
+//   const { body } = req;
+//   try {
+//     const transaction = await Transaction.create({
+//       transmittedValue: body.transmittedValue,
+//       recipient: body.recipient,
+//       sender: body.sender,
+//     });
+//     res.status(200).json({ message: "Transaction completed!", transaction });
+//   } catch (error) {
+//     res.status(400).json({ error: "Transaction not possible" });
+//   }
+// };
