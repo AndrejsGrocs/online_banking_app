@@ -42,6 +42,7 @@ export default function Profile(){
             <h2>ID: {user._id}</h2>
             <h3>{user.username}</h3>
             <h2>Email: {user.email}</h2>
+            <h2>Account Number: {user.accountNumber}</h2>
             <h2>Account Balance: {user.accountBalance}</h2>
             <button>Assets and Investment</button>
             <button ><Link className='button-link' to='/transfer' exact activeClassName='active'>Money Transfer</Link></button>

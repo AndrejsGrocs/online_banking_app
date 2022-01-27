@@ -175,7 +175,7 @@ exports.transaction = async (req, res) => {
     await recipient.updateOne({
       accountBalance: transactionsMath.transactionRecipientBalance(
         recipient,
-        body.transmittedValue
+        Number(body.transmittedValue)
       ),
     });
 
