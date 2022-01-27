@@ -186,20 +186,19 @@ exports.transaction = async (req, res) => {
     //   ),
     // });
 
-    console.log(req.user);
-
     const sender = await User.findByIdAndUpdate(req.user._id, {
       accountBalance: transactionsMath.transactionSenderBalance(
         req.user,
         body.transmittedValue
       ),
-    });
+    }); //.populate("firstname lastname");
 
     const transaction = await Transaction.create({
       transmittedValue: body.transmittedValue,
-      recipient: body.recipient,
+      recipient: recipient._id,
       sender: req.user._id,
     });
+    console.log(req.user._id);
     res.status(200).json({
       message: "Transaction completed!",
       transaction,
