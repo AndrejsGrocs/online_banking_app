@@ -1,23 +1,94 @@
 import React from 'react'
 import image1 from '../../assets/images/assetmanagement1.jpeg'
+import image2 from '../../assets/images/ecoocean.jpg'
+import image3 from '../../assets/images/ocean1.jpg'
+import image4 from '../../assets/images/sustainableenergy.jpg'
+
+import BankPriorities from '../BankPriorities/BankPriorities'
+import CreditCards from '../CreditCards/CreditCrads'
+import Investment from '../InvestmentAssets/InvestmentAssets'
+import Loan from '../Loan/Loan'
+import SiteMapAndContacts from '../SiteMapAndContacts/SiteMapAndContacts'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 export default function Landing() {
     return (
-        <div className='sectionContainerLanding'>
-        <div className='banner'>
-            <h1>Banner</h1>
-        </div>
-         {/* <img className='bannerImg'
-              src={image1}
-              alt="image"
-              
-            /> */}
-            <h1>Banking Asset Management App Main Page</h1>
-            <p>A bank is a financial institution that accepts deposits from the public and creates a demand deposit while simultaneously making loans.[1] Lending activities can be directly performed by the bank or indirectly through capital markets.
+        <div className='Landing'>
 
-                Because banks play an important role in financial stability and the economy of a country, most jurisdictions exercise a high degree of regulation over banks. Most countries have institutionalised a system known as fractional reserve banking, under which banks hold liquid assets equal to only a portion of their current liabilities. In addition to other regulations intended to ensure liquidity, banks are generally subject to minimum capital requirements based on an international set of capital standards, the Basel Accords.
+        <Carousel infiniteLoop autoPlay emulateTouch={true}transitionTime={1000} showArrows={false} showStatus={false}  showThumbs={false}>
+         
+          <div className='banner'>
+                 
+                   <img className='bannerImg' src={image3} />
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader1">Save the ocean environment</h1>
+                       <p className="bannerText1">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton1'>Click here</button>
+                    </div>
+                    
+         </div>
+                <div className='banner'>
+                
+                   <img className='bannerImg' src={image2} />
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader2">Save the ocean environment</h1>
+                       <p className="bannerText2">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton2'>Click here</button>
+                    </div>
+                    
+                </div>
+                <div className='banner'>
+                
+                    <img className='bannerImg' src={image4} />
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader3">Save the ocean environment</h1>
+                       <p className="bannerText3">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton3'>Click here</button>
+                    </div>
 
-                Banking in its modern sense evolved in the fourteenth century in the prosperous cities of Renaissance Italy but in many ways functioned as a continuation of ideas and concepts of credit and lending that had their roots in the ancient world. In the history of banking, a number of banking dynasties – notably, the Medicis, the Fuggers, the Welsers, the Berenbergs, and the Rothschilds – have played a central role over many centuries. The oldest existing retail bank is Banca Monte dei Paschi di Siena (founded in 1472), while the oldest existing merchant bank is Berenberg Bank (founded in 1590).</p>
+                    </div>
+                    <div className='banner'>
+                
+                   <iframe  height="800px" src="https://www.youtube.com/embed/IlFRPkT-hVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <div className='bannerContent'>
+                     <div>
+                       <h1 className="bannerHeader3">Save the ocean environment</h1>
+                       <p className="bannerText3">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                       </div>
+                        <button className='bannerButton3'>Click here</button>
+                    </div>
+
+                    
+
+
+                      
+                    
+                    
+                </div>
+            </Carousel>
+           
+      
+        
+           
+        
+            <BankPriorities/>
+            <CreditCards/>
+            <Loan/>
+            <Investment/>
+            <SiteMapAndContacts/>
+            
         </div>
+        
+           
+        
+
+        
     )
 }

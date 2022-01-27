@@ -1,8 +1,15 @@
-.sectionContainerLanding {
-  width: 70%;
-  height: 100vh;
-  margin: 10rem auto;
-  padding: 10rem;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.Landing {
+  width: 96%;
+  height: 300vh;
+  margin: 0 auto;
+  margin-top: 3.1rem;
+  //padding-top: 2rem;
+  //padding: 2rem;
   padding-top: 1rem;
   font-size: 1rem;
   text-align: center;
@@ -13,19 +20,170 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* body {
-  background-color: #3d5b59;
-} */
-
-.bannerImg {
-  width: 90%;
-  height: 30%;
-  background-size: auto;
+body {
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .banner {
+  width: 100%;
+  height: 800px;
+  //justify-content: center;
+  //align-items: center;
+  margin: 0 auto;
+}
+
+.bannerContent {
+  flex-direction: column;
+  display: flex;
+  margin-top: 100px;
+  margin-left: 50px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 1;
+}
+
+.bannerHeader1 {
+  color: rgb(137, 145, 151);
+}
+
+.bannerText1 {
+  color: rgb(137, 145, 151);
+}
+
+.bannerHeader2 {
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.bannerText2 {
+  color: rgb(255, 255, 255);
+}
+
+.bannerHeader3 {
+  color: rgb(0, 0, 0);
+}
+
+.bannerText3 {
+  color: rgb(0, 0, 0);
+}
+
+.bannerButton1 {
+  background-color: rgb(75, 142, 219);
+  height: 50px;
+  width: 150px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.bannerButton2 {
+  background-color: rgb(101, 221, 236);
+  height: 50px;
+  width: 150px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.bannerButton3 {
+  background-color: rgb(121, 180, 81);
+  height: 50px;
+  width: 150px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.banner-2 {
+  width: 90%;
+  text-align: center;
   background-image: url("../../assets/images/assetmanagement1.jpeg");
   background-size: auto;
   background-position: center center;
-  height: 30%;
+  /* background-repeat: no-repeat; */
+  height: 40%;
+  margin: 0 auto;
+}
+
+.section-image {
+  border-radius: 3%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 18vw;
+  height: 38vh;
+}
+.section-button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  font-family: "Comfortaa", cursive;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
+    0px 0px 10px rgba(0, 0, 0, 0.15);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 0) 5%,
+    rgba(255, 255, 255, 0.5) 6%,
+    rgba(255, 255, 255, 0) 9%,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 0) 17%,
+    rgba(255, 255, 255, 0.5) 19%,
+    rgba(255, 255, 255, 0) 21%
+  );
+  background-size: 150%;
+  background-position: right;
+  transition: 1s;
+}
+
+.section-button:hover {
+  background-position: left;
+  color: white;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.section-button:focus {
+  outline: none;
+}
+
+.section-button:active {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  font-family: "Comfortaa", cursive;
+  color: rgba(153, 22, 22, 0.5);
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
+    0px 0px 10px rgba(0, 0, 0, 0.15);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 0) 5%,
+    rgba(255, 255, 255, 0.5) 6%,
+    rgba(255, 255, 255, 0) 9%,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 0) 17%,
+    rgba(255, 255, 255, 0.5) 19%,
+    rgba(255, 255, 255, 0) 21%
+  );
+  background-size: 150%;
+  background-position: right;
+  transition: 0.18s;
+}
+
+.section-button:after {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  font-family: "Comfortaa", cursive;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  border-radius: 4px;
 }

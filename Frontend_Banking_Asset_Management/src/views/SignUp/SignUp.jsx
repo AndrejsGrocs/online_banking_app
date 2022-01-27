@@ -48,10 +48,10 @@ export default function SignUp() {
 
     return (
         <FormWrapper>
-        <div className='sectionContainer'>
-            <h1>This is Sign Up page</h1>
-            <h2>Here you can Sign Up</h2>
-            <form onSubmit={handleSubmit}>
+        <div className='sign-up-page'>
+            
+            
+            <form className='form-div' onSubmit={handleSubmit}>
         <h3>Sign Up</h3>
               <div className="form-group">
                   <label>First name</label>
@@ -75,15 +75,16 @@ export default function SignUp() {
               </div>
 
                <div className="form-group">
-                  <label>PIN</label>
+                  <label>Enter PIN</label>
                   <input type="PIN" name="PIN" className="form-control" placeholder="Enter PIN" />
               </div>
   
               <ErrorMessage isVisible={isError} errorMessage={errorMessage} />
-              <button className="btn btn-primary btn-block">Sign Up</button>
+              <button className="button-signup">Sign Up</button>
               <p className="forgot-password text-right">
-                  Already registered <Link to="/login">sign in?</Link>
+                  Already registered 
               </p>
+              <button  to="/login" className='button-signup'>Login</button>
   
         </form>
         </div>

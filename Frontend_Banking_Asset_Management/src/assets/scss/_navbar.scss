@@ -1,20 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 5%;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   background-color: #3d5b59;
   align-items: center;
   color: white;
+  z-index: 2;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   width: 30%;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  margin: 0 auto;
   justify-content: space-around;
 
   li a {
@@ -25,4 +33,163 @@
   .active {
     font-weight: 700;
   }
+}
+
+.nav-link:hover {
+  color: #7777aa;
+  //box-shadow: 0px 6px 15px #dbdbeb61;
+}
+.button-nav-login {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #daa5eb;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: 5vh;
+  position: relative;
+  width: 140px;
+
+  height: 40px;
+
+  &::after {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: #7777aa;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #dbdbeb61;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    color: #ffffff;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+      color: #ffffff;
+    }
+  }
+}
+
+.button-nav-signup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #daa5eb;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: 5vh;
+  position: relative;
+  width: 140px;
+
+  height: 40px;
+
+  &::after {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: #7777aa;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #dbdbeb61;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    color: #ffffff;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+      color: #ffffff;
+    }
+  }
+}
+
+.button-nav-logout {
+  font-family: Hack, monospace;
+  background: #7d4291;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: 5vh;
+  position: relative;
+  width: 140px;
+
+  height: 40px;
+
+  &::after {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: #7777aa;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #dbdbeb61;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #ffffff;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+      color: #ffffff;
+    }
+  }
+}
+
+.button-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-buttons-section {
+  list-style: none;
+  display: flex;
+  width: 17%;
+  font-size: 1rem;
+
+  justify-content: space-around;
+}
+
+.bank-logo-section {
+  width: 17%;
+}
+
+.bank-logo {
+  text-decoration: none;
+  color: white;
 }
