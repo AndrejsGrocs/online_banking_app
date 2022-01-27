@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from "react";
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {AppContext} from '../../App'
 export default function Profile(){
@@ -43,6 +44,7 @@ export default function Profile(){
             <h2>Email: {user.email}</h2>
             <h2>Account Balance: {user.accountBalance}</h2>
             <button>Assets and Investment</button>
+            <button ><Link className='button-link' to='/transfer' exact activeClassName='active'>Money Transfer</Link></button>
             </>
             :
             <p>No user found</p>
