@@ -51,11 +51,14 @@ function SiteMapAndContacts() {
          
             </div>
     <div className='icon-list'>
-              <img className='socmediaicon' src={maillogo}/>
-               <img className='socmediaicon' src={instalogo} />
-               <img className='socmediaicon' src={telegramlogo}/>
-               <img className='socmediaicon' src={linkedinlogo}/>
-               <img className='socmediaicon' src={facebooklogo}/>
+               <a href="mailto:info@dolphinbank.com" ><img className='socmediaicon' src={maillogo}></img></a>
+               <a href="https://www.instagram.com/" target="_blank"><img className= 'socmediaicon'   src={instalogo}></img></a>
+               <a href="https://web.telegram.org/z/" target="_blank"><img className= 'socmediaicon'   src={telegramlogo}></img></a>
+               <a href="https://www.linkedin.com/in/robin-skladny-647a1b229" target="_blank"><img className= 'socmediaicon'   src={linkedinlogo}></img></a>
+               <a href="https://de-de.facebook.com/" target="_blank"><img className= 'socmediaicon'   src={facebooklogo}></img></a>
+              
+               
+               
             </div>
           
             
