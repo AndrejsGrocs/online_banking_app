@@ -12,6 +12,7 @@ router.get("/logout", controller.logout);
 router.use(passport.authenticate("jwt", { session: false }));
 
 router.post("/transaction", controller.transaction);
+router.get("/history", controller.transactionHistory);
 router.post("/balance", controller.accountBalance);
 router.patch("/update", controller.updateUser);
 router.delete("/delete", controller.deleteUser);
