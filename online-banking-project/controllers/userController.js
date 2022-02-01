@@ -213,9 +213,19 @@ exports.transaction = async (req, res) => {
 
 exports.transactionHistory = async (req, res) => {
   try {
-    const history = await Transaction.find();
+    const historyAsRecipient = await Transaction.find({ recipient: req.user._id }).populate({ path: "sender", select: "firstname lastname accountNumber" });
+    const historyAsSender = await Transaction.find({ sender: req.user._id}).populate({ path: "recipient", select: "firstname lastname accountNumber" });
+    const transactions = historyAsRecipient.concat(historyAsSender);
 
-    res.status(200).json({ Transaction_History: history });
+    const sortedTransactions = transactions.sort((a, b) => {
+      if (a.createdOn < b.createdOn ){
+        return 1;
+      }
+
+      return -1;
+    });
+
+    res.status(200).json(sortedTransactions);
   } catch (err) {
     res.status(400).json({
       Error: "Transaction history not accessible, please contact us.",
