@@ -211,16 +211,15 @@ exports.transaction = async (req, res) => {
   }
 };
 
-// exports.transactions = async (req, res) => {
-//   const { body } = req;
-//   try {
-//     const transaction = await Transaction.create({
-//       transmittedValue: body.transmittedValue,
-//       recipient: body.recipient,
-//       sender: body.sender,
-//     });
-//     res.status(200).json({ message: "Transaction completed!", transaction });
-//   } catch (error) {
-//     res.status(400).json({ error: "Transaction not possible" });
-//   }
-// };
+exports.transactionHistory = async (req, res) => {
+  try {
+    const history = await Transaction.find();
+
+    res.status(200).json({ Transaction_History: history });
+  } catch (err) {
+    res.status(400).json({
+      Error: "Transaction history not accessible, please contact us.",
+      err,
+    });
+  }
+};
