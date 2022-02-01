@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {AppContext} from '../../App'
+import TransactionHistory from "../TransferHistory/TransferHistory";
 export default function Profile(){
     /* const [user, setUser] = useState(null); */
      const {user} = useContext(AppContext)
@@ -52,7 +53,7 @@ export default function Profile(){
   
            
         }
-  
+              <TransactionHistory/>
       </div>
     )
 }
