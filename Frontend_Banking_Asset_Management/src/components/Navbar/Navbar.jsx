@@ -1,6 +1,7 @@
 import React, {useContext} from 'react' 
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../App'
+import logoimg from '../../assets/images/db-bank-logo-1.png'
 
 
 
@@ -11,7 +12,7 @@ export default function Navbar() {
     return (
         <nav className='nav'>
         <div className='bank-logo-section'>
-           <a className='bank-logo' href="/">Bank Logo</a>   
+           <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg}></img>}</a>   
         </div>
 
         <ul className='nav-list'>
