@@ -6,13 +6,29 @@ import link from "../BankPrioritiesPage/BankPrioritiesPage"
 
 
 
+
 function TransactionHistory() {
 
-              const history = async()=>{
+
+/* 
+            const {user} = useContext(AppContext)
+            const {recipient} = useContext(AppContext)  */
+        
+              //Declaring state
+
+             const [seeHistory, setSeeHistory]=useState(false)
+
+             const[historyList, setHistoryList] =useState([])
+
+             //Fetching transaction history
+
+              const getHistory = async()=>{
                   const response = await axios.get('/api/user/history', {withCredentials:true})
 
-                  
-                  console.log(response.data);
+                  console.log(response);
+                  setSeeHistory(true)
+
+                  setHistoryList(response.data)
               }
               
 
@@ -20,11 +36,7 @@ function TransactionHistory() {
               //2. Render that state -> using map
               // 3. Render using a new subcomponent for example "Entry"
 
-             const {user} = useContext(AppContext)
-              const {recipient} = useContext(AppContext) 
-             console.log(user);
-
-             const [seeHistory, setSeeHistory]=useState(false)
+            
 
   return <div className='transaction-history'>
 
@@ -32,18 +44,26 @@ function TransactionHistory() {
 
             <div className=''>
             <h1 className='bpph1'>Transaction History</h1>
-            <button onClick={()=>history()}>View History</button>
+            <button onClick={()=>getHistory()}>View History</button>
             <div>
             {
                 seeHistory
                 ?
                 <>
-                <p></p>
-                <p>Date:</p>
-                <p>From:{user.firstname} {user.lastname}</p>
+                 {historyList.map((transaction)=>(<div key={transaction._id}>
+                     <p></p>
+                <p>Date: 
+                {`${new Date(transaction.createdOn).toLocaleDateString()} / ${new Date(transaction.createdOn).toLocaleTimeString()}`},
+                
+              
+                </p>
+                {/* <p>From:{user.firstname} {user.lastname}</p> */}
                 <p>To</p>
-                <p>Recipient data from api {}</p>
-                <p>Amount {}</p>
+                <p> {transaction.recipient.firstname} {transaction.recipient.lastname}</p>
+                <p>Amount {transaction.transmittedValue}</p>
+                </div>
+            ))}
+                
                 </>
                 :
                 <p>Press View History Button to see your previous transactions</p>

@@ -8,15 +8,18 @@ import {AppContext} from '../../App'
 export default function MoneyTransfer(){
     
      const {user, recipient} = useContext(AppContext)
+     const [trasactionCompleted, setTransactionCompleted] = useState(false)
      console.log(user)
       const moneyTransfer = async(e)=>{
           e.preventDefault()
+          console.log(e);
           const formData = new FormData(e.target)
 
           const data = {accountNumber: formData.get('recipientaccount'), transmittedValue: formData.get('transferamount')}
 
           const res = await axios.post('/api/user/transaction', data)
           console.log(res);
+          setTransactionCompleted(true)
       }
     
 
@@ -54,6 +57,7 @@ export default function MoneyTransfer(){
   
            
         }
+        {trasactionCompleted?<p>Transaction Completed</p>:null}
   
       </div>
     )

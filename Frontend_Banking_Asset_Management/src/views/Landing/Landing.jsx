@@ -14,7 +14,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 export default function Landing() {
     return (
-        <div className='Landing'>
+        <div className='box-element   Landing'>
 
         <Carousel infiniteLoop autoPlay emulateTouch={true}transitionTime={1000} showArrows={false} showStatus={false}  showThumbs={false}>
          
