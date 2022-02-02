@@ -14,6 +14,7 @@ import AccountPage from '../views/AccountPage/AccountPage'
 import Investment from '../views/InvestmentAssets/InvestmentAssets'
 import InvestmentPage from '../views/InvestmentPage/InvestmentPage'
 import LoanPage from '../views/LoanPage/LoanPage'
+import MoneyTransfer from '../views/MoneyTransferPage/MoneyTransferPage'
 
 export default function MainRouter() {
     return (
@@ -36,6 +37,7 @@ export default function MainRouter() {
               <Route path='/login' element={<Login/>}/>
               <Route path='/signup' element={<SignUp/>}/>
               <Route path='/profile' element={<Profile/>}/>
+              <Route path='/transfer' element = {<MoneyTransfer/>}/>
               <Route path='/logout' element={<Logout/>}/>
 
 

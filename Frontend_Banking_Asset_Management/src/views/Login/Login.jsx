@@ -21,11 +21,11 @@ export default function Login() {
               PIN:formData.get('pin')
           }
           try{
-              ///?????????????
+              
               const response = await axios.post('/api/user/login', data)
              
               
-              ///??????????
+             
               handleLogin(response.data.user)
               navigate('/profile')
           }catch (error){

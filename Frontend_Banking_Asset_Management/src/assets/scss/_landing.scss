@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .Landing {
@@ -46,7 +47,10 @@ body {
 }
 
 .bannerHeader1 {
-  color: rgb(137, 145, 151);
+  color: rgb(47, 50, 53);
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
 }
 
 .bannerText1 {

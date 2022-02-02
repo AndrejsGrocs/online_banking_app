@@ -14,6 +14,7 @@ export const AppContext = createContext({
 export default function App() {
     
     const [user, setUser] = useState({});
+   const [recipient, setRecipient] = useState({}) 
     
   const [loggedIn, setLoggedIn] = useState('');
   const handleLogin = (_user) => {

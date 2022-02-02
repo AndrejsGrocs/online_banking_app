@@ -1,6 +1,7 @@
 import React, {useContext} from 'react' 
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../App'
+import logoimg from '../../assets/images/db-bank-logo-1.png'
 
 
 
@@ -11,19 +12,20 @@ export default function Navbar() {
     return (
         <nav className='nav'>
         <div className='bank-logo-section'>
-           <a className='bank-logo' href="/">Bank Logo</a>   
+           <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg}></img>}</a>   
         </div>
 
         <ul className='nav-list'>
         {loggedIn?( 
             <>
             <li><Link to='/' exact activeClassName='active'> Bank</Link></li>
-        <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
-        <li><Link to='/investment' exact activeClassName='active'>Investment</Link></li>
-        <li><Link to='/loan' exact activeClassName='active'>Loan</Link></li>
-        <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
-        <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
+            <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
+            <li><Link to='/investment' exact activeClassName='active'>Investment</Link></li>
+            <li><Link to='/loan' exact activeClassName='active'>Loan</Link></li>
+            <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
+            <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
             <li><Link to='/profile' exact activeClassName='active'> Profile</Link></li>
+            <li><Link to='/transfer' exact activeClassName='active'> Transfer Money</Link></li>
         
           
                </>
@@ -35,6 +37,7 @@ export default function Navbar() {
         <li><Link to='/loan' exact activeClassName='active' className='nav-link'>Loan</Link></li>
         <li><Link to='/investment' exact activeClassName='active' className='nav-link'>Investment</Link></li>
         <li><Link to='/aboutus' exact activeClassName='active' className='nav-link'>About US </Link></li>
+        
         
        
         </>
