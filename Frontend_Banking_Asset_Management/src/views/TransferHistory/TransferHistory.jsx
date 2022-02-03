@@ -2,6 +2,7 @@ import axios from "../../util/axiosInstance";
 import React, { useContext, useReducer, useState } from 'react';
 import {AppContext} from '../../App'
 import link from "../BankPrioritiesPage/BankPrioritiesPage"
+import TransferGrid from "./TransferGrid";
 
 
 
@@ -45,11 +46,13 @@ function TransactionHistory() {
             <div className=''>
             <h1 className='bpph1'>Transaction History</h1>
             <button onClick={()=>getHistory()}>View History</button>
+
             <div>
             {
                 seeHistory
                 ?
                 <>
+                <TransferGrid transactionList={historyList}></TransferGrid>
                  {historyList.map((transaction)=>(<div key={transaction._id}>
                      <p></p>
                 <p>Date: 
