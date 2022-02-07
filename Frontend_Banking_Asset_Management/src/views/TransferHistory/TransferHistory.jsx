@@ -3,16 +3,18 @@ import React, { useContext, useReducer, useState } from 'react';
 import {AppContext} from '../../App'
 import link from "../BankPrioritiesPage/BankPrioritiesPage"
 import TransferGrid from "./TransferGrid";
+import SentTransaction from "./SentTransaction";
+import ReceiveTransaction from "./ReceiveTransaction";
 
 
 
 
 
 function TransactionHistory() {
-
+    const {user} = useContext(AppContext)
 
 /* 
-            const {user} = useContext(AppContext)
+            
             const {recipient} = useContext(AppContext)  */
         
               //Declaring state
@@ -37,9 +39,9 @@ function TransactionHistory() {
               //2. Render that state -> using map
               // 3. Render using a new subcomponent for example "Entry"
 
-            
 
-  return <div className='transaction-history'>
+
+  return (<div className='transaction-history'>
 
               
 
@@ -53,20 +55,8 @@ function TransactionHistory() {
                 ?
                 <>
                 <TransferGrid transactionList={historyList}></TransferGrid>
-                 {historyList.map((transaction)=>(<div key={transaction._id}>
-                     <p></p>
-                <p>Date: 
-                {`${new Date(transaction.createdOn).toLocaleDateString()} / ${new Date(transaction.createdOn).toLocaleTimeString()}`},
-                
-              
-                </p>
-                {/* <p>From:{user.firstname} {user.lastname}</p> */}
-                <p>To</p>
-                <p> {transaction.recipient.firstname} {transaction.recipient.lastname}</p>
-                <p>Amount {transaction.transmittedValue}</p>
-                </div>
-            ))}
-                
+                 {historyList.map((transaction)=>{user._id === transaction.recipient._id ? <ReceiveTransaction/> : <SentTransaction/>})}
+                 
                 </>
                 :
                 <p>Press View History Button to see your previous transactions</p>
@@ -80,7 +70,7 @@ function TransactionHistory() {
             </div>
            
             
-        </div>
+        </div>)
 }
 
 export default TransactionHistory;

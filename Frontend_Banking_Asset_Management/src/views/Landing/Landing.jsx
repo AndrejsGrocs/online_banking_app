@@ -15,64 +15,41 @@ import { Carousel } from 'react-responsive-carousel';
 export default function Landing() {
     return (
         <div className='box-element   Landing'>
-
-        <Carousel infiniteLoop autoPlay emulateTouch={true}transitionTime={1000} showArrows={false} showStatus={false}  showThumbs={false}>
+          
+       
          
           <div className='banner'>
+                    
                  
-                   <img className='bannerImg' src={image3} />
+                   {/* <img className='bannerImg' src={image3} /> */}
                      <div className='bannerContent'>
-                     <div>
-                       <h1 className="bannerHeader1">Save the ocean environment</h1>
-                       <p className="bannerText1">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
+                     <div className=''>
+                       <h1 className="bannerHeader1">Save the Ocean Environment</h1>
+                       <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
                        </div>
                         <button className='bannerButton1'>Click here</button>
                     </div>
+                    <div>
+                    
+                       <div >
+                      
+                         <h1 className="">Save the Ocean Environment</h1>
+                       <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
+                       </div>
+                       <div >
+                         <h1 className="">Save the Ocean Environment</h1>
+                       <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
+                       </div>
+
+                       </div>
+
+               
                     
          </div>
-                <div className='banner'>
-                
-                   <img className='bannerImg' src={image2} />
-                     <div className='bannerContent'>
-                     <div>
-                       <h1 className="bannerHeader2">Save the ocean environment</h1>
-                       <p className="bannerText2">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
-                       </div>
-                        <button className='bannerButton2'>Click here</button>
-                    </div>
-                    
-                </div>
-                <div className='banner'>
-                
-                    <img className='bannerImg' src={image4} />
-                     <div className='bannerContent'>
-                     <div>
-                       <h1 className="bannerHeader3">Save the ocean environment</h1>
-                       <p className="bannerText3">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
-                       </div>
-                        <button className='bannerButton3'>Click here</button>
-                    </div>
-
-                    </div>
-                    <div className='banner'>
-                
-                   <iframe  height="800px" src="https://www.youtube.com/embed/IlFRPkT-hVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                     <div className='bannerContent'>
-                     <div>
-                       <h1 className="bannerHeader3">Save the ocean environment</h1>
-                       <p className="bannerText3">Investment in to the Eco ocean saving projects and more and more an more info in this sentence</p>
-                       </div>
-                        <button className='bannerButton3'>Click here</button>
-                    </div>
-
-                    
-
-
-                      
-                    
-                    
-                </div>
-            </Carousel>
+               
+               
+                   
+           
            
       
         

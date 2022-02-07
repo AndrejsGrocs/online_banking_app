@@ -5,7 +5,7 @@
 }
 
 .Landing {
-  width: 96%;
+  width: 100%;
   height: 300vh;
   margin: 0 auto;
   margin-top: 3.1rem;
@@ -16,7 +16,7 @@
   text-align: center;
 
   color: rgb(0, 0, 0);
-  /*  background-color: #b5e5cf; */
+
   background-color: rgb(236, 246, 255);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -27,11 +27,16 @@ body {
 }
 
 .banner {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 800px;
+  height: 900px;
   //justify-content: center;
   //align-items: center;
   margin: 0 auto;
+  background-image: url(../images/ocean1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .bannerContent {
@@ -39,6 +44,7 @@ body {
   display: flex;
   margin-top: 100px;
   margin-left: 50px;
+  margin-top: 350px;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -46,11 +52,24 @@ body {
   z-index: 1;
 }
 
+.banner-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+img.bannerImg {
+  width: 100%;
+  height: 900px;
+  //resizemode: "contain";
+  background-position: bottom;
+}
+
 .bannerHeader1 {
   color: #2a3d4f;
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
   font-family: "Poppins", sans-serif;
   font-weight: 900;
+  font-size: 50px;
 }
 
 .bannerText1 {
