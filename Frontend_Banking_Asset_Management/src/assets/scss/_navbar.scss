@@ -18,6 +18,7 @@
   z-index: 2;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -30,7 +31,7 @@
 
   li a {
     text-decoration: none;
-    color: rgb(39, 39, 39);
+    color: #2a3d4f;
   }
 
   .active {
@@ -38,28 +39,35 @@
   }
 }
 
-.nav-link:hover {
+a.button-link {
+  color: #1d1d1d;
+  margin-top: 100px;
+}
+
+a.nav-link:hover {
   color: #535353;
-  border-radius: 10px;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
 
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 6px 15px #dbdbeb61;
+  box-shadow: 0px 6px 15px #69697061;
 }
 .button-nav-login {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background: #daa5eb;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background: #fbc78d;
   color: #1d1d1d;
   cursor: pointer;
   font-size: 0.8em;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 0;
   transition: all 0.5s;
   border-radius: 10px;
-  width: 5vh;
   position: relative;
   width: 140px;
-
-  height: 40px;
+  height: 48px;
 
   &::after {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -70,7 +78,7 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    transform: translate(-50%, -50%);
+    //transform: translate(0%, -50%);
   }
 
   &:hover {
@@ -78,7 +86,7 @@
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px #dbdbeb61;
-    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    //padding: 1.5rem 1.5rem 0rem 1.5rem;
     color: #ffffff;
 
     &::after {
@@ -90,20 +98,19 @@
 }
 
 .button-nav-signup {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background: #daa5eb;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background: #fbc78d;
   color: #1d1d1d;
   cursor: pointer;
   font-size: 0.8em;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 0;
   transition: all 0.5s;
   border-radius: 10px;
-  width: 5vh;
   position: relative;
   width: 140px;
-
-  height: 40px;
+  height: 48px;
 
   &::after {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -114,7 +121,7 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    transform: translate(-50%, -50%);
+    //transform: translate(0%, -50%);
   }
 
   &:hover {
@@ -122,7 +129,7 @@
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px #dbdbeb61;
-    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    //padding: 1.5rem 1.5rem 1.5rem 3rem;
     color: #ffffff;
 
     &::after {
@@ -134,20 +141,19 @@
 }
 
 .button-nav-logout {
-  font-family: Hack, monospace;
-  background: #7d4291;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background: #fbc78d;
   color: #1d1d1d;
   cursor: pointer;
   font-size: 0.8em;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 0;
   transition: all 0.5s;
   border-radius: 10px;
-  width: 5vh;
   position: relative;
   width: 140px;
-
-  height: 40px;
+  height: 48px;
 
   &::after {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -158,7 +164,6 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    transform: translate(-50%, -50%);
   }
 
   &:hover {
@@ -166,7 +171,7 @@
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px #dbdbeb61;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    //padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     color: #ffffff;
 
     &::after {

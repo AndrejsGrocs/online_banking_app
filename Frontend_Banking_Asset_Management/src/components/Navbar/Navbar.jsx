@@ -1,7 +1,7 @@
 import React, {useContext} from 'react' 
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../App'
-import logoimg from '../../assets/images/db-bank-logo-1.png'
+import logoimg from '../../assets/images/db-bank-logo-navbar150-1.png'
 
 
 
