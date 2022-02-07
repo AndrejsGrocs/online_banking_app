@@ -27,7 +27,7 @@ export default function Landing() {
                        <h1 className="bannerHeader1">Save the Ocean Environment</h1>
                        <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
                        </div>
-                        <button className='bannerButton1'>Click here</button>
+                        <button className='bannerButton1'>Open bank account</button>
                     </div>
                     <div>
                     

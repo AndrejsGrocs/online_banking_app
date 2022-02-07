@@ -37,6 +37,7 @@ body {
   background-image: url(../images/ocean1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 15px;
 }
 
 .bannerContent {
@@ -76,45 +77,27 @@ img.bannerImg {
   color: #2a3d4f;
 }
 
-.bannerHeader2 {
-  justify-content: center;
-  color: #2a3d4f;
-}
-
-.bannerText2 {
-  color: #2a3d4f;
-}
-
-.bannerHeader3 {
-  color: #2a3d4f;
-}
-
-.bannerText3 {
-  color: #2a3d4f;
-}
-
 .bannerButton1 {
-  background-color: rgb(75, 142, 219);
+  background-color: #fbc78d;
+  color: #2a3d4f;
   height: 50px;
-  width: 150px;
-  border-radius: 20px;
+  width: 250px;
+  border-radius: 30px;
   margin-top: 20px;
-}
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  border: 0;
+  cursor: pointer;
 
-.bannerButton2 {
-  background-color: rgb(101, 221, 236);
-  height: 50px;
-  width: 150px;
-  border-radius: 20px;
-  margin-top: 20px;
-}
-
-.bannerButton3 {
-  background-color: rgb(121, 180, 81);
-  height: 50px;
-  width: 150px;
-  border-radius: 20px;
-  margin-top: 20px;
+  &:hover {
+    background: #7777aa;
+    transition: all 0.5s;
+    border-radius: 30px;
+    box-shadow: 0px 6px 15px #dbdbeb61;
+    //padding: 1.5rem 1.5rem 1.5rem 3rem;
+    color: #ffffff;
+  }
 }
 
 .banner-2 {
