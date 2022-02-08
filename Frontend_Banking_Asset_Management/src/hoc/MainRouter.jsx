@@ -46,7 +46,7 @@ export default function MainRouter() {
 
         </Routes>
           
-           <Footer/>
+          
         </Router>
     )
 }

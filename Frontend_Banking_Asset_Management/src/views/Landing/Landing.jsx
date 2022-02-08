@@ -9,6 +9,7 @@ import CreditCards from '../CreditCards/CreditCrads'
 import Investment from '../InvestmentAssets/InvestmentAssets'
 import Loan from '../Loan/Loan'
 import SiteMapAndContacts from '../SiteMapAndContacts/SiteMapAndContacts'
+import Footer from '../../components/Footer/Footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -60,6 +61,7 @@ export default function Landing() {
             <Loan/>
             <Investment/>
             <SiteMapAndContacts/>
+            <Footer/>
             
         </div>
         
