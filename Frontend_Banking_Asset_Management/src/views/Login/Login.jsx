@@ -46,17 +46,17 @@ export default function Login() {
             <form onSubmit={handleSubmit} className='login-form'>
                <label>
                  
-                 <input className='input-login' name='email' type='email'   required={true} />
+                 <input className='input-login' name='email' type='email'  placeholder='Enter email' required={true} />
                </label>
                
                <label>
                  
-                 <input className='input-login' name='password' type='password'  required={true}/>
+                 <input className='input-login' name='password' type='password' placeholder='Password' required={true}/>
                </label>
 
                <label>
                 
-                 <input className='input-login' name='pin' type='pin'  required={true}/>
+                 <input className='input-login' name='pin' type='pin' placeholder='PIN' required={true}/>
                </label>
                  
                  <label>

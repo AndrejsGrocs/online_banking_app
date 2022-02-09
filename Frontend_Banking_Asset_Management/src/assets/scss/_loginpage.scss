@@ -8,16 +8,12 @@
   width: 100%;
   height: 95vh;
   margin-top: 50px;
-
   font-size: 1rem;
   text-align: center;
   background-image: url(./../images/turtle.jpeg);
   background-position: 0 70%;
   background-repeat: no-repeat;
-
   color: rgb(0, 0, 0);
-  /*  background-color: #b5e5cf; */
-  background-color: rgb(236, 246, 255);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -28,29 +24,35 @@
   padding-top: 300px;
 }
 
+label {
+  width: 30%;
+  margin: 0 auto;
+}
+
 .input-login {
   margin-top: 20px;
-  background-color: #fbc78d;
-  //background: transparent;
-  opacity: 0.5;
+  background-color: #fbc78dde;
+  font-family: "Poppins", sans-serif;
+  padding-left: 30px;
   border: 0;
   outline: 0;
-  width: 30%;
+  width: 100%;
   height: 5vh;
   border-radius: 30px;
   content: "Text";
+  opacity: 0.8;
 }
 
 .input-login:before {
   content: "Some CSS Text";
 }
 
-.input-login:focus {
-  background-color: white;
+label.input-login:focus {
+  background-color: #ffffffde;
 }
 
 .input-login:hover {
-  background-color: #7777aa;
+  background-color: #7777aade;
 }
 
 .login-button {
@@ -66,7 +68,7 @@
   font-size: 17px;
   border: 0;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
 
   &:hover {
     background: #7777aa;
@@ -76,8 +78,4 @@
     //padding: 1.5rem 1.5rem 1.5rem 3rem;
     color: #ffffff;
   }
-}
-
-label {
-  width: 2;
 }

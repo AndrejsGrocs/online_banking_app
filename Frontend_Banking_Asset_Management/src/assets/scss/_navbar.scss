@@ -42,7 +42,15 @@
 
 a.button-link {
   color: #1d1d1d;
-  margin-top: 100px;
+
+  width: 50px;
+  height: 50px;
+}
+
+.button-link {
+  text-decoration: none;
+  color: white;
+  margin-top: 0;
 }
 
 a.nav-link:hover {
@@ -127,11 +135,6 @@ a.nav-link:hover {
     //padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     color: #ffffff;
   }
-}
-
-.button-link {
-  text-decoration: none;
-  color: white;
 }
 
 .nav-buttons-section {

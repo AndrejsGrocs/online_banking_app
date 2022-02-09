@@ -18,14 +18,14 @@ export default function Navbar() {
         <ul className='nav-list'>
         {loggedIn?( 
             <>
-            <li><Link to='/' exact activeClassName='active'> Bank</Link></li>
-            <li><Link to='/mission' exact activeClassName='active'> Mission</Link></li>
-            <li><Link to='/investment' exact activeClassName='active'>Investment</Link></li>
-            <li><Link to='/loan' exact activeClassName='active'>Loan</Link></li>
-            <li><Link to='/account' exact activeClassName='active'> Account</Link></li>
-            <li><Link to='/aboutus' exact activeClassName='active'>About US </Link></li>
-            <li><Link to='/profile' exact activeClassName='active'> Profile</Link></li>
-            <li><Link to='/transfer' exact activeClassName='active'> Transfer Money</Link></li>
+            <li><Link to='/' exact activeClassName='active' className='nav-link'> Bank</Link></li>
+            <li><Link to='/mission' exact activeClassName='active' className='nav-link'> Mission</Link></li>
+            <li><Link to='/investment' exact activeClassName='active' className='nav-link'>Investment</Link></li>
+            <li><Link to='/loan' exact activeClassName='active' className='nav-link'>Loan</Link></li>
+            <li><Link to='/account' exact activeClassName='active' className='nav-link'> Account</Link></li>
+            <li><Link to='/aboutus' exact activeClassName='active' className='nav-link'>About US </Link></li>
+            <li><Link to='/profile' exact activeClassName='active' className='nav-link'> Profile</Link></li>
+            <li><Link to='/transfer' exact activeClassName='active' className='nav-link'> Transfer Money</Link></li>
         
           
                </>
