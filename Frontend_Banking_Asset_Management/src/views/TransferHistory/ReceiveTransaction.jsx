@@ -12,7 +12,7 @@ function ReceiveTransaction({transaction}) {
                 </p>
                 {/* <p>From:{user.firstname} {user.lastname}</p> */}
                 <p>From</p>
-                <p> {transaction.recipient.firstname} {transaction.recipient.lastname}</p>
+                <p> +{transaction.sender.firstname} {transaction.sender.lastname}</p>
                 <p>Amount {transaction.transmittedValue}</p>
                 </div>
             ;

@@ -56,8 +56,11 @@ function TransactionHistory() {
                 <>
                 <TransferGrid transactionList={historyList}></TransferGrid>
                  {historyList.map((transaction)=>{
-                    return user._id === transaction.recipient._id ?
+                     console.log(transaction)
+                      console.log(user._id)
+                    return user._id === transaction.recipient ?
                     <ReceiveTransaction transaction={transaction}/> : <SentTransaction transaction={transaction}/>})}
+                   
 
                 </>
                 :

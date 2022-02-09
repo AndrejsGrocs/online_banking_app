@@ -29,10 +29,10 @@ body {
 .banner {
   display: flex;
   flex-direction: row;
+  background-position: 0 15%;
+  background-repeat: no-repeat;
   width: 100%;
   height: 91vh;
-  //justify-content: center;
-  //align-items: center;
   margin: 0 auto;
   background-image: url(../images/ocean1.jpg);
   background-size: cover;
@@ -40,15 +40,39 @@ body {
   margin-top: 15px;
 }
 
-.bannerContent {
-  flex-direction: column;
+.banner-stats {
+  text-align: center;
   display: flex;
-  margin-top: 100px;
-  margin-left: 50px;
-  margin-top: 350px;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 850px;
+  margin-top: 400px;
+}
+
+h1.stats-header {
+  color: #2a3d4f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+div.stats-block {
+  height: 40px;
+  width: 150px;
+}
+
+div.bannerContent {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 80px;
+  margin-left: 200px;
+  margin-top: 250px;
   position: absolute;
   justify-content: center;
   align-items: center;
+  text-align: left;
   top: 0;
   z-index: 1;
 }
@@ -62,7 +86,7 @@ img.bannerImg {
   width: 100%;
   height: 900px;
   //resizemode: "contain";
-  background-position: bottom;
+  background-position: 0 70%;
 }
 
 .bannerHeader1 {
@@ -75,6 +99,19 @@ img.bannerImg {
 
 .bannerText1 {
   color: #2a3d4f;
+  font-family: "Poppins", sans-serif;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 17px;
+  width: 50%;
+  text-align: left;
+}
+
+.stats-text {
+  color: #2a3d4f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .bannerButton1 {
@@ -84,6 +121,7 @@ img.bannerImg {
   width: 250px;
   border-radius: 30px;
   margin-top: 20px;
+  margin-right: auto;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 17px;
