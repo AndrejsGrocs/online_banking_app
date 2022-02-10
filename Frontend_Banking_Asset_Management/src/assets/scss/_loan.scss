@@ -6,11 +6,12 @@
 
 .loan {
   display: flex;
-  justify-content: space-evenly;
-  background-color: rgb(167, 174, 187);
+  justify-content: left;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
   color: grey;
   width: 100%;
-  height: 80vh;
+  height: 95vh;
   text-align: center;
   align-items: center;
 }
