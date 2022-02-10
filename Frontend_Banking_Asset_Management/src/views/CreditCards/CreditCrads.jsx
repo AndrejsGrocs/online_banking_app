@@ -1,21 +1,21 @@
 
 
 import React from 'react';
-import susecoimage from '../../assets/images/suseco.jpeg'
+import creditcardimage from '../../assets/images/db-bank-Card-BG.png'
 
 
 function CreditCards() {
   return <div className='credit-cards'>
-  <img className='section-image' src={susecoimage} />
-            <div className='bppflex'>
-            <h1 className='bpph1'>Credit Cards Page</h1>
-            <p className='bppp1'>Most banks use your money and invest it in guns, coal and other harmful industries - without your consent. We only invest your money sustainably.</p>
-            <button className='section-button' type="button" onClick={(e) => {
+  
+            <div className='bppflex2'>
+            <h1 className='bpph2'>Account and Card</h1>
+            <p className='bppp2'>Most banks use your money and invest it in guns, coal and other harmful industries - without your consent. We only invest your money sustainably.</p>
+            <button className='sectionButton2' type="button" onClick={(e) => {
       e.preventDefault();
       window.location.href='/account';
-      }}>Click Me!</button>
+      }}>More Details</button>
             </div>
-            
+            <img className='section-image2' src={creditcardimage} />
         </div>
 }
 

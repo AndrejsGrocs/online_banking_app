@@ -11,7 +11,7 @@ function SentTransaction({transaction}) {
                 {/* <p>From:{user.firstname} {user.lastname}</p> */}
                 <p>To</p>
                 <p> {transaction.recipient.firstname} {transaction.recipient.lastname}</p>
-                <p>Amount {transaction.transmittedValue}</p>
+                <p>Amount - {transaction.transmittedValue}</p>
                 </div>
             ;
 }

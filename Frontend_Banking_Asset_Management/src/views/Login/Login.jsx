@@ -38,26 +38,25 @@ export default function Login() {
 
 
     return (
-        <FormWrapper>
-        <div className='sectionContainer'>
+       
+        <div className='loginContainer'>
         
-            <h1>This is Login page</h1>
-            <h2>Here you can Login</h2>
             
-            <form onSubmit={handleSubmit}>
+            
+            <form onSubmit={handleSubmit} className='login-form'>
                <label>
-                 Email 
-                 <input name='email' type='email' required={true}/>
+                 
+                 <input className='input-login' name='email' type='email'  placeholder='Enter email' required={true} />
                </label>
                
                <label>
-                 Password
-                 <input name='password' type='password' required={true}/>
+                 
+                 <input className='input-login' name='password' type='password' placeholder='Password' required={true}/>
                </label>
 
                <label>
-                 PIN
-                 <input name='pin' type='pin' required={true}/>
+                
+                 <input className='input-login' name='pin' type='pin' placeholder='PIN' required={true}/>
                </label>
                  
                  <label>
@@ -65,7 +64,7 @@ export default function Login() {
 
                  </label>
 
-                 <button>Login</button>
+                 <button className='login-button'>Login</button>
 
 
 
@@ -74,6 +73,6 @@ export default function Login() {
            
             
         </div>
-         </FormWrapper>
+         
     )
 }

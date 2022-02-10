@@ -55,8 +55,13 @@ function TransactionHistory() {
                 ?
                 <>
                 <TransferGrid transactionList={historyList}></TransferGrid>
-                 {historyList.map((transaction)=>{user._id === transaction.recipient._id ? <ReceiveTransaction/> : <SentTransaction/>})}
-                 
+                 {historyList.map((transaction)=>{
+                     console.log(transaction)
+                      console.log(user._id)
+                    return user._id === transaction.recipient ?
+                    <ReceiveTransaction transaction={transaction}/> : <SentTransaction transaction={transaction}/>})}
+                   
+
                 </>
                 :
                 <p>Press View History Button to see your previous transactions</p>

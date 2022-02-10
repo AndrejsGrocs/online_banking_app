@@ -29,25 +29,57 @@ body {
 .banner {
   display: flex;
   flex-direction: row;
+  background-position: 0 10%;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 900px;
-  //justify-content: center;
-  //align-items: center;
+  height: 91vh;
   margin: 0 auto;
   background-image: url(../images/ocean1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 15px;
 }
 
-.bannerContent {
-  flex-direction: column;
+.banner-stats {
+  text-align: center;
   display: flex;
-  margin-top: 100px;
-  margin-left: 50px;
-  margin-top: 350px;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 850px;
+  margin-top: 430px;
+}
+
+h1.stats-header {
+  color: #2a3d4f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+div.stats-block {
+  height: 40px;
+  width: 250px;
+}
+
+.stats-text {
+  color: #2a3d4f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+div.bannerContent {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+  margin-left: 200px;
+  margin-top: 200px;
   position: absolute;
   justify-content: center;
   align-items: center;
+  text-align: left;
   top: 0;
   z-index: 1;
 }
@@ -61,7 +93,7 @@ img.bannerImg {
   width: 100%;
   height: 900px;
   //resizemode: "contain";
-  background-position: bottom;
+  background-position: 0 70%;
 }
 
 .bannerHeader1 {
@@ -69,52 +101,41 @@ img.bannerImg {
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 4.08rem;
 }
 
 .bannerText1 {
   color: #2a3d4f;
-}
+  font-family: "Lora", serif;
+  margin-right: auto;
 
-.bannerHeader2 {
-  justify-content: center;
-  color: #2a3d4f;
-}
-
-.bannerText2 {
-  color: #2a3d4f;
-}
-
-.bannerHeader3 {
-  color: #2a3d4f;
-}
-
-.bannerText3 {
-  color: #2a3d4f;
+  font-size: 1.7rem;
+  width: 80%;
+  text-align: left;
 }
 
 .bannerButton1 {
-  background-color: rgb(75, 142, 219);
+  background-color: #fbc78d;
+  color: #2a3d4f;
   height: 50px;
-  width: 150px;
-  border-radius: 20px;
-  margin-top: 20px;
-}
+  width: 250px;
+  border-radius: 30px;
+  margin-top: 60px;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  border: 0;
+  cursor: pointer;
 
-.bannerButton2 {
-  background-color: rgb(101, 221, 236);
-  height: 50px;
-  width: 150px;
-  border-radius: 20px;
-  margin-top: 20px;
-}
-
-.bannerButton3 {
-  background-color: rgb(121, 180, 81);
-  height: 50px;
-  width: 150px;
-  border-radius: 20px;
-  margin-top: 20px;
+  &:hover {
+    background: #7777aa;
+    transition: all 0.5s;
+    border-radius: 30px;
+    //box-shadow: 0px 6px 15px #dbdbeb61;
+    //padding: 1.5rem 1.5rem 1.5rem 3rem;
+    color: #ffffff;
+  }
 }
 
 .banner-2 {

@@ -9,6 +9,7 @@ import CreditCards from '../CreditCards/CreditCrads'
 import Investment from '../InvestmentAssets/InvestmentAssets'
 import Loan from '../Loan/Loan'
 import SiteMapAndContacts from '../SiteMapAndContacts/SiteMapAndContacts'
+import Footer from '../../components/Footer/Footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -23,22 +24,38 @@ export default function Landing() {
                  
                    {/* <img className='bannerImg' src={image3} /> */}
                      <div className='bannerContent'>
-                     <div className=''>
+                     
                        <h1 className="bannerHeader1">Save the Ocean Environment</h1>
                        <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
-                       </div>
-                        <button className='bannerButton1'>Click here</button>
-                    </div>
-                    <div>
+                       <button className='bannerButton1' type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/signup';
+      }}>Open bank account</button>
+                     </div>
+                        
+                   
+                 
                     
-                       <div >
+                    
+                       <div className='banner-stats'>
+                          <div className='stats-block'>
                       
-                         <h1 className="">Save the Ocean Environment</h1>
-                       <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
+                         <h1 className="stats-header">909,360</h1>
+                       <p className="stats-text">United People of DB</p>
                        </div>
-                       <div >
-                         <h1 className="">Save the Ocean Environment</h1>
-                       <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
+                       <div className='stats-block'>
+                         <h1 className="stats-header">108t +</h1>
+                       <p className="stats-text">Daily plastic removed from the oceans</p>
+                       </div>
+
+                       <div className='stats-block'>
+                         <h1 className="stats-header">99m +</h1>
+                       <p className="stats-text">Rainforest trees planted</p>
+                       </div>
+
+                       <div className='stats-block'>
+                         <h1 className="stats-header">99.3m €</h1>
+                       <p className="stats-text">Invested in ECO projects</p>
                        </div>
 
                        </div>
@@ -60,6 +77,7 @@ export default function Landing() {
             <Loan/>
             <Investment/>
             <SiteMapAndContacts/>
+            <Footer/>
             
         </div>
         
