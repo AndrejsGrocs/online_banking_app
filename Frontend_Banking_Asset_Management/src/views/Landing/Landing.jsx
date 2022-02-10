@@ -27,7 +27,10 @@ export default function Landing() {
                      
                        <h1 className="bannerHeader1">Save the Ocean Environment</h1>
                        <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
-                       <button className='bannerButton1'>Open bank account</button>
+                       <button className='bannerButton1' type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/signup';
+      }}>Open bank account</button>
                      </div>
                         
                    

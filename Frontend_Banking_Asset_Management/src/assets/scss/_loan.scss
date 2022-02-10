@@ -6,7 +6,8 @@
 
 .loan {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
+  flex-direction: row;
   background-color: rgb(255, 255, 255);
   color: grey;
   width: 100%;
