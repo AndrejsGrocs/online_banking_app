@@ -47,37 +47,41 @@ export default function SignUp() {
 
 
     return (
-        <FormWrapper>
-        <div className='sign-up-page'>
+       
+        <div className='loginContainer'>
             
             
-            <form className='form-div' onSubmit={handleSubmit}>
-        <h3>Sign Up</h3>
-              <div className="form-group">
-                  <label>First name</label>
-                  <input type="text" name="firstname"  className="form-control" placeholder="First name" />
-              </div>
+            <form className='login-form' onSubmit={handleSubmit}>
+       
+              
+                  <label>
+                  <input type="text" name="firstname"  className="input-login" placeholder="First name" />
+                  </label>
+             
   
-              <div className="form-group">
-                  <label>Last name</label>
-                  <input type="text" name="lastname"   className="form-control" placeholder="Last name" />
-              </div>
+             
+                  <label>
+                  <input type="text" name="lastname"   className="input-login" placeholder="Last name" />
+                  </label>
+             
   
   
-              <div className="form-group">
-                  <label>Email address</label>
-                  <input type="email" name="email"  className="form-control" placeholder="Enter email" />
-              </div>
+             
+                  <label>
+                  <input type="email" name="email"  className="input-login" placeholder="Enter email" />
+                  </label>
+            
   
-              <div className="form-group">
-                  <label>Password</label>
-                  <input type="password" name="password" className="form-control" placeholder="Enter password" />
-              </div>
+           
+                  <label>
+                  <input type="password" name="password" className="input-login" placeholder="Enter password" />
+                  </label>
+            
 
-               <div className="form-group">
-                  <label>Enter PIN</label>
-                  <input type="PIN" name="PIN" className="form-control" placeholder="Enter PIN" />
-              </div>
+              
+                  <label>
+                  <input type="PIN" name="PIN" className="input-login" placeholder="Enter PIN" />
+                </label>
   
               <ErrorMessage isVisible={isError} errorMessage={errorMessage} />
               <button className="button-signup">Sign Up</button>
@@ -88,6 +92,6 @@ export default function SignUp() {
   
         </form>
         </div>
-        </FormWrapper>
+      
     )
 }

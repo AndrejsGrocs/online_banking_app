@@ -48,14 +48,23 @@ export default function Navbar() {
         </ul>
         {!loggedIn?(
 <div className='nav-buttons-section'> 
-        <li><button className='button-nav-login'><Link className='button-link' to='/login' exact activeClassName='active'> Login</Link></button></li>
-        <li><button className='button-nav-signup'><Link className='button-link' to='/signup' exact activeClassName='active'> Sign Up</Link></button></li>
+        <li><button className='button-nav-login' type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/login';
+      }}> Login</button></li>
+        <li><button className='button-nav-signup' type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/signup';
+      }}>Sign Up</button></li>
         </div>
 
 
         ):(
             <div className='nav-buttons-section'>
-            <button className='button-nav-logout'><Link className='button-link' to='/logout' exact activeClassName='active'> Logout</Link></button>
+            <button className='button-nav-logout' type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/logout';
+      }}>Logout</button>
             </div>
         )}
           
