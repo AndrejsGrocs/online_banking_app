@@ -33,19 +33,28 @@ export default function Profile(){
 
     return (
       <div className="profile-page">
-      <h1>Profile</h1>
+      
         {
             user != null 
             ?
             <>
             
-            <h1>Name: {user.firstname} {user.lastname}</h1>
-            <h2>ID: {user._id}</h2>
-            <h3>{user.username}</h3>
-            <h2>Email: {user.email}</h2>
-            <h2>Account Number: {user.accountNumber}</h2>
-            <h2>Account Balance: {user.accountBalance}</h2>
-            <button ><Link className='button-link' to='/transfer' exact activeClassName='active'>Money Transfer</Link></button>
+
+             <div className="account-number">
+            <p>Account Number</p>
+            <p>{user.accountNumber}</p>
+            </div>
+              
+              <div className="acc-user-data">
+            <h2>Hi  {user.firstname},</h2>
+            <h2>Total Balance </h2>
+            <h2>{user.accountBalance}</h2>
+               </div>
+
+            <button className='history-transfer-button' type="button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/login';
+      }}>Transfer Money</button>
             </>
             :
             <p>No user found</p>
