@@ -46,9 +46,9 @@ export default function Profile(){
             </div>
               
               <div className="acc-user-data">
-            <h2>Hi  {user.firstname},</h2>
-            <h2>Total Balance </h2>
-            <h2>{user.accountBalance}</h2>
+            <p className="profile-greeting">Hi  {user.firstname},</p>
+            <p className="total-balance-text">TOTAL BALANCE </p>
+            <p className="account-balance">{user.accountBalance} EUR</p>
                </div>
 
             <button className='history-transfer-button' type="button" onClick={(e) => {

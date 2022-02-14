@@ -46,9 +46,10 @@ function TransactionHistory() {
               
 
             <div className=''>
-            <h1 className='bpph1'>Transaction History</h1>
-            <button onClick={()=>getHistory()}>View History</button>
-
+            <div className="text-and-button">
+            <h1 className='t-history-text'>Transaction History</h1>
+            <button className='t-history-button' onClick={()=>getHistory()}>View History</button>
+            </div>
             <div>
             {
                 seeHistory
@@ -64,7 +65,7 @@ function TransactionHistory() {
 
                 </>
                 :
-                <p>Press View History Button to see your previous transactions</p>
+                <p>Press button to see the history</p>
             }
             </div>
             {/* <button className='section-button' type="button" onClick={(e) => {
