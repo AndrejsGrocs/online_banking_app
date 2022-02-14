@@ -51,10 +51,15 @@ export default function Profile(){
             <p className="account-balance">{user.accountBalance} EUR</p>
                </div>
 
-            <button className='history-transfer-button' type="button" onClick={(e) => {
+    {/*         <button className='' type="button" onClick={(e) => {
       e.preventDefault();
-      window.location.href='/login';
-      }}>Transfer Money</button>
+      window.location.href='/transfer';
+      }}>Transfer Money</button> */}
+
+    
+
+
+      <Link to='/transfer' exact activeClassName='active' className='history-transfer-button'> Transfer Money</Link>
             </>
             :
             <p>No user found</p>

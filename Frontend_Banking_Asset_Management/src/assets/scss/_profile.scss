@@ -65,11 +65,13 @@
   color: #2a3d4f;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .t-history-button {
-  width: 100px;
+  width: 130px;
+  height: 30px;
+  margin-left: 20px;
   border: 0;
   background-color: rgb(255, 255, 255);
   text-decoration: none;
@@ -79,8 +81,9 @@
 .t-history-button:hover {
   color: #535353;
   border-radius: 30px;
-  width: 100px;
-  //height: 50px;
+  width: 130px;
+  height: 30px;
+  margin-left: 20px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 6px 15px #69697061;
   color: #2a3d4f;
@@ -111,6 +114,7 @@
   height: 48px;
   margin: 0 auto;
   margin-top: 20px;
+  text-decoration: none;
 
   &:hover {
     background: #7777aa;
@@ -120,4 +124,76 @@
     //padding: 1.5rem 1.5rem 0rem 1.5rem;
     color: #ffffff;
   }
+}
+
+.transaction-block-to {
+  display: flex;
+  background-color: #ffffff;
+
+  width: 70%;
+  height: 80px;
+  margin-left: 10%;
+  border-radius: 30px;
+  margin-top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.transaction-block-from {
+  display: flex;
+  background-color: #ffffff;
+  width: 70%;
+  height: 80px;
+  margin-left: 10%;
+  border-radius: 30px;
+  margin-top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.transactions-list {
+  margin-top: 100px;
+}
+
+.arrow-image-green {
+  padding: 20px;
+}
+
+.received-funds {
+  padding-right: 20px;
+  margin-top: 30px;
+  margin-left: auto;
+  color: #2a3d4f;
+  width: 20%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.sent-funds {
+  padding-right: 20px;
+  margin-top: 30px;
+  margin-left: auto;
+  color: #939aa0;
+  width: 20%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.transaction-person {
+  margin-top: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  height: 20px;
+  color: #2a3d4f;
+  width: 20%;
+  font-size: 1.1rem;
+}
+
+.transaction-date {
+  margin-top: 30px;
+  width: 30%;
+  text-align: left;
+  margin-top: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #2a3d4f;
+  font-size: 0.9rem;
 }
