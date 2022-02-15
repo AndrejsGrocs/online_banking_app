@@ -1,23 +1,21 @@
 {
-  "name": "references-crud-assignment",
+  "name": "online-banking-app_final_project",
   "version": "1.0.0",
-  "description": "This exercise will allow you to recap what we've learned so far.",
+  "description": "This is the backend.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GillesDCI/references-crud-assignment.git"
+    "type": "git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Robin Skladny",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GillesDCI/references-crud-assignment/issues"
   },
-  "homepage": "https://github.com/GillesDCI/references-crud-assignment#readme",
+  "homepage": "https://github.com/",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
