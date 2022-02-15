@@ -31,7 +31,7 @@ export default function MoneyTransfer(){
             user != null 
             ?
             <>
-              <div className="account-number">
+         {/*      <div className="account-number">
             <p>Account Number</p>
             <p>{user.accountNumber}</p>
             </div>
@@ -40,13 +40,13 @@ export default function MoneyTransfer(){
             <p className="total-balance-text">TOTAL BALANCE </p>
             <p className="account-balance">{user.accountBalance.toFixed(2)} EUR</p>
               <Link to='/profile' exact activeClassName='active' className='to-profile-button'>To Profile</Link>
-               </div>
+               </div> */}
                <div className='send-money-card'>
            <div className='money-card-data1'>
-            <p className='money-card-text'> Sender Name: </p>
+            <p className='money-card-text'> Sender Name</p>
             <p className='money-card-text'>Sender Account Number</p>
-              <p className='money-card-text'>Recipient Account: {}</p>
-              <p className='money-card-text'>Transfer amount:</p>
+              <p className='money-card-text'>Recipient Account {}</p>
+              <p className='money-card-text'>Transfer amount</p>
           </div>
              
 

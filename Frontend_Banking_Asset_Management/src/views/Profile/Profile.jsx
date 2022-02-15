@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {AppContext} from '../../App'
 import TransactionHistory from "../TransferHistory/TransferHistory";
+import MoneyTransfer from "../MoneyTransferPage/MoneyTransferPage";
 export default function Profile(){
     /* const [user, setUser] = useState(null); */
      const {user} = useContext(AppContext)
      console.log(user)
+
+     const [profileToggle, setProfileToggle] = useState(true)
+
+     const [buttonText, setButtonText] = useState(true)
     //load the profile information
     /* const getProfile = async() => { */
 
@@ -51,23 +56,26 @@ export default function Profile(){
             <p className="account-balance">{user.accountBalance.toFixed(2)} EUR</p>
                </div>
 
-    {/*         <button className='' type="button" onClick={(e) => {
-      e.preventDefault();
-      window.location.href='/transfer';
-      }}>Transfer Money</button> */}
+     <button className='history-transfer-button' type="button" onClick={(e) => {
+         
+        setProfileToggle(!profileToggle)
+             
 
-    
+      }}>{profileToggle!==true ? 'Profile' : 'Send Money'} </button> 
+
+       { profileToggle!==true ?   <MoneyTransfer/>:<TransactionHistory/>}
+
+          
+      
 
 
-      <Link to='/transfer' exact activeClassName='active' className='history-transfer-button'> Transfer Money</Link>
             </>
             :
-            
             <p>No user found</p>
   
            
         }
-              <TransactionHistory/>
+             
       </div>
     )
 }
