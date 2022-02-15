@@ -16,7 +16,7 @@ function SentTransaction({transaction}) {
                 {/* <p>From:{user.firstname} {user.lastname}</p> */}
                 
                 
-                <p className='sent-funds'> - {transaction.transmittedValue} EUR</p>
+                <p className='sent-funds'> - {transaction.transmittedValue.toFixed(2)} EUR</p>
                 </div>
             ;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState, useContext } from "react";
+import { Link } from 'react-router-dom'
 import axios from '../../util/axiosInstance';
 import {AppContext} from '../../App'
 
@@ -25,32 +26,55 @@ export default function MoneyTransfer(){
 
     return (
       <div className="transfer-page">
-       <h1>Money Transfer</h1>
+      
         {
             user != null 
             ?
             <>
+              <div className="account-number">
+            <p>Account Number</p>
+            <p>{user.accountNumber}</p>
+            </div>
+             <div className="acc-user-data">
+            <p className="profile-greeting">Hi  {user.firstname},</p>
+            <p className="total-balance-text">TOTAL BALANCE </p>
+            <p className="account-balance">{user.accountBalance.toFixed(2)} EUR</p>
+              <Link to='/profile' exact activeClassName='active' className='to-profile-button'>To Profile</Link>
+               </div>
+               <div className='send-money-card'>
+           <div className='money-card-data1'>
+            <p className='money-card-text'> Sender Name: </p>
+            <p className='money-card-text'>Sender Account Number</p>
+              <p className='money-card-text'>Recipient Account: {}</p>
+              <p className='money-card-text'>Transfer amount:</p>
+          </div>
+             
+
+          
+          
+            <form className='money-card-data2' onSubmit={moneyTransfer}>
+            <p className='money-card-user-text'>{user.firstname} {user.lastname}</p>
+             <p className='money-card-user-accountnumber'>{user.accountNumber}</p>
+            <label className='label-block'>
             
-            <h2>Sender Name: {user.firstname} {user.lastname}</h2>
-            <h2>Available Funds: {user.accountBalance}</h2>
-            <h2>Recipient Account: {}</h2>
-            <form onSubmit={moneyTransfer}>
-            <label>
-                 
-                 <input name='recipientaccount' type='recipientaccount' required={true}/>
+                
+           
+
+                 <input className='money-card-input' name='recipientaccount' type='recipientaccount' required={true}/>
                </label>
 
 
 
-            <h2>Transfer amount:</h2>
-            <label>
+            
+            <label className='label-block'>
                  
-                 <input name='transferamount' type='transferamount' required={true}/>
+                 <input className='money-card-input' name='transferamount' type='transferamount' required={true}/>
                </label>
           
            
-            <button >Send</button>
+            <button className='send-money-button'>Send</button>
             </form>
+              </div>
             </>
             :
             <p>No user found</p>

@@ -48,7 +48,7 @@ export default function Profile(){
               <div className="acc-user-data">
             <p className="profile-greeting">Hi  {user.firstname},</p>
             <p className="total-balance-text">TOTAL BALANCE </p>
-            <p className="account-balance">{user.accountBalance} EUR</p>
+            <p className="account-balance">{user.accountBalance.toFixed(2)} EUR</p>
                </div>
 
     {/*         <button className='' type="button" onClick={(e) => {
@@ -62,6 +62,7 @@ export default function Profile(){
       <Link to='/transfer' exact activeClassName='active' className='history-transfer-button'> Transfer Money</Link>
             </>
             :
+            
             <p>No user found</p>
   
            
