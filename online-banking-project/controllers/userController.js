@@ -8,9 +8,6 @@ const accountNumberHelper = require("./../helpers/accountNumberHelper");
 const transactionsMath = require("./../helpers/transactionsMath");
 
 exports.registerUser = async (req, res) => {
-  console.log("hello");
-  /*  console.log(req.body.PIN); */
-
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const PIN = req.body.PIN;
@@ -166,7 +163,7 @@ exports.transaction = async (req, res) => {
     const recipient = await User.findOne({ accountNumber: body.accountNumber });
 
     if (recipient == null) {
-      res.status(400).json({
+      return res.status(400).json({
         message:
           "User with this account number does not exist, please try again.",
       });
@@ -175,14 +172,17 @@ exports.transaction = async (req, res) => {
     const sender = await User.findByIdAndUpdate(req.user._id, {
       accountBalance: transactionsMath.transactionSenderBalance(
         req.user,
-        body.transmittedValue
+        Number(body.transmittedValue)
       ),
-    }); //.populate("firstname lastname");
+    }).populate("firstname lastname");
 
     console.log(sender.accountBalance);
     console.log(body.transmittedValue);
 
-    if (sender.accountBalance > body.transmittedValue) {
+    if (
+      body.transmittedValue < sender.accountBalance &&
+      body.transmittedValue > 0
+    ) {
       await recipient.updateOne({
         accountBalance: transactionsMath.transactionRecipientBalance(
           recipient,
@@ -190,9 +190,10 @@ exports.transaction = async (req, res) => {
         ),
       });
     } else {
-      res
-        .status(400)
-        .json("you have reached your limit. Transaction is not possible!");
+      return res.status(400).json({
+        message:
+          "This transaction is not possible due to your account limit or a negative input.",
+      });
     }
 
     const transaction = await Transaction.create({
