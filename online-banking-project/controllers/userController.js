@@ -172,20 +172,6 @@ exports.transaction = async (req, res) => {
       });
     }
 
-    await recipient.updateOne({
-      accountBalance: transactionsMath.transactionRecipientBalance(
-        recipient,
-        Number(body.transmittedValue)
-      ),
-    });
-
-    // const recipient = await User.findOneAndUpdate(body.accountNumber, {
-    //   accountBalance: transactionsMath.transactionRecipientBalance(
-    //     req.user,
-    //     body.transmittedValue
-    //   ),
-    // });
-
     const sender = await User.findByIdAndUpdate(req.user._id, {
       accountBalance: transactionsMath.transactionSenderBalance(
         req.user,
@@ -193,12 +179,28 @@ exports.transaction = async (req, res) => {
       ),
     }); //.populate("firstname lastname");
 
+    console.log(sender.accountBalance);
+    console.log(body.transmittedValue);
+
+    if (sender.accountBalance > body.transmittedValue) {
+      await recipient.updateOne({
+        accountBalance: transactionsMath.transactionRecipientBalance(
+          recipient,
+          Number(body.transmittedValue)
+        ),
+      });
+    } else {
+      res
+        .status(400)
+        .json("you have reached your limit. Transaction is not possible!");
+    }
+
     const transaction = await Transaction.create({
       transmittedValue: body.transmittedValue,
       recipient: recipient._id,
       sender: req.user._id,
     });
-    console.log(req.user._id);
+    // console.log(req.user._id);
     res.status(200).json({
       message: "Transaction completed!",
       transaction,
@@ -213,12 +215,19 @@ exports.transaction = async (req, res) => {
 
 exports.transactionHistory = async (req, res) => {
   try {
-    const historyAsRecipient = await Transaction.find({ recipient: req.user._id }).populate({ path: "sender", select: "firstname lastname accountNumber" });
-    const historyAsSender = await Transaction.find({ sender: req.user._id}).populate({ path: "recipient", select: "firstname lastname accountNumber" });
+    const historyAsRecipient = await Transaction.find({
+      recipient: req.user._id,
+    }).populate({ path: "sender", select: "firstname lastname accountNumber" });
+    const historyAsSender = await Transaction.find({
+      sender: req.user._id,
+    }).populate({
+      path: "recipient",
+      select: "firstname lastname accountNumber",
+    });
     const transactions = historyAsRecipient.concat(historyAsSender);
 
     const sortedTransactions = transactions.sort((a, b) => {
-      if (a.createdOn < b.createdOn ){
+      if (a.createdOn < b.createdOn) {
         return 1;
       }
 

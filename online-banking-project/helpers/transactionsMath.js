@@ -1,6 +1,13 @@
+const { json } = require("express/lib/response");
+
+//* transaction function that does not accept to transfer more money than available on the account
+
 exports.transactionSenderBalance = (user, transmittedValue) => {
-  const balance = (user.accountBalance -= transmittedValue);
-  return balance;
+  let result;
+  user.accountBalance < transmittedValue
+    ? (result = user.accountBalance)
+    : (result = user.accountBalance -= transmittedValue);
+  return result;
 };
 
 exports.transactionRecipientBalance = (user, transmittedValue) => {
