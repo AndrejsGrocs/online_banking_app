@@ -12,28 +12,7 @@ export default function Profile(){
      const [profileToggle, setProfileToggle] = useState(true)
 
      const [buttonText, setButtonText] = useState(true)
-    //load the profile information
-    /* const getProfile = async() => { */
 
-
-          
-/*         try {
-            //making a get request to fetch the profile information
-            const response = await axios.get("http://localhost:3001/api/user/profile");
-            console.log(response)
-            if(response.status === 200){
-                setUser(response.data.user);
-            }
-            
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-    useEffect(() => {
-        //fetch profile information when component renders.
-        getProfile();
-    }, []) */
 
 
     return (

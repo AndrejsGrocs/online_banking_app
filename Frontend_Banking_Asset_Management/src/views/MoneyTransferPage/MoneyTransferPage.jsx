@@ -81,7 +81,7 @@ export default function MoneyTransfer(){
   
            
         }
-        {trasactionCompleted?<p>Transaction Completed</p>:null}
+        {trasactionCompleted?<p className='transaction-complited-text'>Transaction Completed</p>:null}
   
       </div>
     )

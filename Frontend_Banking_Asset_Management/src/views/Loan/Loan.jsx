@@ -1,12 +1,12 @@
 import React from 'react';
-import susecoimage from '../../assets/images/suseco.jpeg'
+import susecoimage from '../../assets/images/db-bank-Loan.png'
 
 function Loan() {
   return <div className='loan'>
             <img className='section-image1' src={susecoimage} />
             <div className='bppflex'>
             <h1 className='bpph1'>Loan</h1>
-            <p className='bppp1'>Most banks use your money and invest it in guns, coal and other harmful industries - without your consent. We only invest your money sustainably.</p>
+            <p className='bppp1'>Money for good - We finance change!</p>
             <button className='sectionButton1' type="button" type="button" onClick={(e) => {
       e.preventDefault();
       window.location.href='/loan';

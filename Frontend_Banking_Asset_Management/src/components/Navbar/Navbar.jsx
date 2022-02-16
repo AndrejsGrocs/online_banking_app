@@ -11,6 +11,7 @@ export default function Navbar() {
     
     return (
         <nav className='nav'>
+        
         <div className='bank-logo-section'>
            <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg}></img>}</a>   
         </div>
@@ -56,6 +57,10 @@ export default function Navbar() {
       e.preventDefault();
       window.location.href='/signup';
       }}>Sign Up</button></li>
+
+
+      <label className='hamburger' for="toggle">&#9776;</label>
+        <input type='checkbox' className='toggle' id='toggle'></input>
         </div>
 
 
@@ -65,10 +70,12 @@ export default function Navbar() {
       e.preventDefault();
       window.location.href='/logout';
       }}>Logout</button>
+
+      
             </div>
         )}
           
-
+           
         </nav>
     )
 }
