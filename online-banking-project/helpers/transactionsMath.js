@@ -4,7 +4,9 @@ const { json } = require("express/lib/response");
 
 exports.transactionSenderBalance = (user, transmittedValue) => {
   let result;
-  user.accountBalance < transmittedValue
+  let transmittedValue = Number;
+
+  user.accountBalance < transmittedValue || transmittedValue <= 0
     ? (result = user.accountBalance)
     : (result = user.accountBalance -= transmittedValue);
   return result;
@@ -17,3 +19,5 @@ exports.transactionRecipientBalance = (user, transmittedValue) => {
 
 //* write a helper that prevents negative numbers for the transaction of the sender
 // * also prevent from going negative
+
+let trans;
