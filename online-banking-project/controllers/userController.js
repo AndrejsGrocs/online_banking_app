@@ -91,6 +91,8 @@ exports.accountBalance = async (req, res) => {
       { new: true }
     );
 
+    console.log();
+
     if (!balanceToUpdate)
       return res.status(404).json({ message: "Customer not found" });
 
@@ -192,7 +194,7 @@ exports.transaction = async (req, res) => {
     } else {
       return res.status(400).json({
         message:
-          "This transaction is not possible due to your account limit or a negative input.",
+          "This transaction is not possible due to your account limit or a negative or input of zero.",
       });
     }
 
