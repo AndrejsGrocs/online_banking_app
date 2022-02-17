@@ -45,6 +45,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 90%;
   margin-left: 850px;
   margin-top: 430px;
 }
@@ -73,13 +74,13 @@ div.bannerContent {
   display: flex;
   flex-direction: column;
   width: 30%;
-
+  text-align: left;
   margin-left: 200px;
   margin-top: 200px;
   position: absolute;
   justify-content: center;
   align-items: center;
-  text-align: left;
+
   top: 0;
   z-index: 1;
 }
@@ -230,4 +231,389 @@ img.bannerImg {
   color: rgba(255, 255, 255, 0.5);
   font-size: 20px;
   border-radius: 4px;
+}
+
+/* Responsive */
+
+/* Mobile */
+
+@media screen and (min-width: 320px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1rem;
+    width: 80%;
+    text-align: left;
+  }
+
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 300px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 4.08rem;
+  }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 481px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1rem;
+    width: 80%;
+    text-align: left;
+  }
+
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 300px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+  }
+}
+
+/* Small screens, laptops */
+
+@media screen and (min-width: 769px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1.2rem;
+    width: 80%;
+    text-align: left;
+  }
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 450px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+}
+
+/* Desktops, large screens */
+
+@media screen and (min-width: 1025px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1.3rem;
+    width: 80%;
+    text-align: left;
+  }
+
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    margin-left: 550px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra large screens, TV */
+
+@media screen and (min-width: 1201px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: left;
+  }
+
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin-left: 600px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1.7rem;
+    width: 80%;
+    text-align: left;
+  }
+
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin-left: 550px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  /*  Banner Texts and Buttons */
+
+  h1.stats-header {
+    color: #2a3d4f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
+  .bannerText1 {
+    color: #2a3d4f;
+    font-family: "Lora", serif;
+    margin-right: auto;
+
+    font-size: 1.7rem;
+    width: 80%;
+    text-align: left;
+  }
+
+  /* Banner statistics info */
+
+  .banner-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 850px;
+    margin-top: 430px;
+  }
+
+  .bannerHeader1 {
+    color: #2a3d4f;
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 3.3rem;
+  }
+
+  @media screen and (min-width: 1920px) {
+    h1.stats-header {
+      color: #2a3d4f;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      font-weight: 900;
+    }
+
+    .bannerText1 {
+      color: #2a3d4f;
+      font-family: "Lora", serif;
+      margin-right: auto;
+
+      font-size: 1.7rem;
+      width: 80%;
+      text-align: left;
+    }
+
+    /* Banner statistics info */
+
+    .banner-stats {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 80%;
+      margin-left: 850px;
+      margin-top: 430px;
+    }
+
+    .bannerHeader1 {
+      color: #2a3d4f;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-size: 3.9rem;
+    }
+  }
+
+  @media screen and (min-width: 2100px) {
+    h1.stats-header {
+      color: #2a3d4f;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      font-weight: 900;
+    }
+
+    .bannerText1 {
+      color: #2a3d4f;
+      font-family: "Lora", serif;
+      margin-right: auto;
+
+      font-size: 1.7rem;
+      width: 80%;
+      text-align: left;
+    }
+
+    /* Banner statistics info */
+
+    .banner-stats {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 90%;
+      margin-left: 850px;
+      margin-top: 430px;
+    }
+
+    .bannerHeader1 {
+      color: #2a3d4f;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-size: 4.08rem;
+    }
+  }
 }

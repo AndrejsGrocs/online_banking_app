@@ -9,7 +9,7 @@ function BankPriorities() {
             <div className='bppflex'>
             
             <h1 className='bpph1'>Bank Priorities</h1>
-            <p className='bppp1'>Most banks use your money and invest it in guns, coal and other harmful industries - without your consent. We only invest your money sustainably.</p>
+            <p className='bppp1'>Your money can do more than you think! It can be your way to contribute to a change, learn more...</p>
             <button className='sectionButton1' type="button" onClick={(e) => {
       e.preventDefault();
       window.location.href='/mission';

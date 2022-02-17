@@ -23,9 +23,15 @@ function TransactionHistory() {
 
              const[historyList, setHistoryList] =useState([])
 
+            /*  const [showHistory, setShowHistory] = useState(true) */
+
              //Fetching transaction history
 
               const getHistory = async()=>{
+                  if(seeHistory){
+                      setSeeHistory(false);
+                      return
+                  }
                   const response = await axios.get('/api/user/history', {withCredentials:true})
 
                   console.log(response);
@@ -34,10 +40,7 @@ function TransactionHistory() {
                   setHistoryList(response.data)
               }
               
-
-              //1. Store that data into some state (intialise with empty array)
-              //2. Render that state -> using map
-              // 3. Render using a new subcomponent for example "Entry"
+            
 
 
 
@@ -46,10 +49,15 @@ function TransactionHistory() {
               
 
             <div className=''>
-            <h1 className='bpph1'>Transaction History</h1>
-            <button onClick={()=>getHistory()}>View History</button>
+            <div className="text-and-button">
+            <h1 className='t-history-text'>Transaction History</h1>
+            <button className='t-history-button' onClick={()=>
+            getHistory()}>{seeHistory!==true ? 'VIEW HISTORY':'HIDE HISTORY'}</button>
 
-            <div>
+            {/* {showHistory!==true ? getHistory():''} */}
+            
+            </div>
+            <div className='transactions-list'>
             {
                 seeHistory
                 ?
@@ -64,7 +72,7 @@ function TransactionHistory() {
 
                 </>
                 :
-                <p>Press View History Button to see your previous transactions</p>
+                <p></p>
             }
             </div>
             {/* <button className='section-button' type="button" onClick={(e) => {

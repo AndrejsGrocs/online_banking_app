@@ -3,56 +3,58 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {AppContext} from '../../App'
 import TransactionHistory from "../TransferHistory/TransferHistory";
+import MoneyTransfer from "../MoneyTransferPage/MoneyTransferPage";
 export default function Profile(){
     /* const [user, setUser] = useState(null); */
      const {user} = useContext(AppContext)
      console.log(user)
-    //load the profile information
-    /* const getProfile = async() => { */
 
+     const [profileToggle, setProfileToggle] = useState(true)
 
-          
-/*         try {
-            //making a get request to fetch the profile information
-            const response = await axios.get("http://localhost:3001/api/user/profile");
-            console.log(response)
-            if(response.status === 200){
-                setUser(response.data.user);
-            }
-            
-        } catch (error) {
-            console.log(error);
-        }
-    }
+     const [buttonText, setButtonText] = useState(true)
 
-    useEffect(() => {
-        //fetch profile information when component renders.
-        getProfile();
-    }, []) */
 
 
     return (
       <div className="profile-page">
-      <h1>Profile</h1>
+      
         {
             user != null 
             ?
             <>
             
-            <h1>Name: {user.firstname} {user.lastname}</h1>
-            <h2>ID: {user._id}</h2>
-            <h3>{user.username}</h3>
-            <h2>Email: {user.email}</h2>
-            <h2>Account Number: {user.accountNumber}</h2>
-            <h2>Account Balance: {user.accountBalance}</h2>
-            <button ><Link className='button-link' to='/transfer' exact activeClassName='active'>Money Transfer</Link></button>
+
+             <div className="account-number">
+            <p>Account Number</p>
+            <p>{user.accountNumber}</p>
+            </div>
+              
+              <div className="acc-user-data">
+            <p className="profile-greeting">Hi  {user.firstname},</p>
+            <p className="total-balance-text">TOTAL BALANCE </p>
+            <p className="account-balance">{user.accountBalance.toFixed(2)} EUR</p>
+               </div>
+
+     <button className='history-transfer-button' type="button" onClick={(e) => {
+         
+        setProfileToggle(!profileToggle)
+             
+
+      }}>{profileToggle!==true ? 'Profile' : 'Send Money'} </button> 
+
+       { profileToggle!==true ?   <MoneyTransfer/>:<TransactionHistory/>}
+
+          
+      
+
+
             </>
             :
             <p>No user found</p>
   
            
         }
-              <TransactionHistory/>
+             
       </div>
     )
 }

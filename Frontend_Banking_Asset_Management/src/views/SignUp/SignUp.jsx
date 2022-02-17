@@ -48,7 +48,7 @@ export default function SignUp() {
 
     return (
        
-        <div className='loginContainer'>
+        <div className='sign-up-page'>
             
             
             <form className='login-form' onSubmit={handleSubmit}>

@@ -11,6 +11,7 @@ export default function Navbar() {
     
     return (
         <nav className='nav'>
+        
         <div className='bank-logo-section'>
            <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg}></img>}</a>   
         </div>
@@ -18,25 +19,25 @@ export default function Navbar() {
         <ul className='nav-list'>
         {loggedIn?( 
             <>
-            <li><Link to='/' exact activeClassName='active' className='nav-link'> Bank</Link></li>
-            <li><Link to='/mission' exact activeClassName='active' className='nav-link'> Mission</Link></li>
-            <li><Link to='/investment' exact activeClassName='active' className='nav-link'>Investment</Link></li>
-            <li><Link to='/loan' exact activeClassName='active' className='nav-link'>Loan</Link></li>
-            <li><Link to='/account' exact activeClassName='active' className='nav-link'> Account</Link></li>
-            <li><Link to='/aboutus' exact activeClassName='active' className='nav-link'>About US </Link></li>
-            <li><Link to='/profile' exact activeClassName='active' className='nav-link'> Profile</Link></li>
-            <li><Link to='/transfer' exact activeClassName='active' className='nav-link'> Transfer Money</Link></li>
+            <li><Link to='/' activeclassname='active' className='nav-link'> Bank</Link></li>
+            <li><Link to='/mission' activeclassname='active' className='nav-link'> Mission</Link></li>
+            <li><Link to='/investment' activeclassname='active' className='nav-link'>Investment</Link></li>
+            <li><Link to='/loan' activeclassname='active' className='nav-link'>Loan</Link></li>
+            <li><Link to='/account' activeclassname='active' className='nav-link'> Account</Link></li>
+            <li><Link to='/aboutus' activeclassname='active' className='nav-link'>About US </Link></li>
+            <li><Link to='/profile' activeclassname='active' className='nav-link'> Profile</Link></li>
+            {/* <li><Link to='/transfer' activeclassname='active' className='nav-link'> Transfer Money</Link></li> */}
         
           
                </>
         ):(
             <>
-        <li><Link to='/' exact activeClassName='active' className='nav-link'> Bank</Link></li>
-        <li><Link to='/mission' exact activeClassName='active' className='nav-link'> Mission</Link></li>
-        <li><Link to='/account' exact activeClassName='active' className='nav-link'> Account</Link></li>
-        <li><Link to='/loan' exact activeClassName='active' className='nav-link'>Loan</Link></li>
-        <li><Link to='/investment' exact activeClassName='active' className='nav-link'>Investment</Link></li>
-        <li><Link to='/aboutus' exact activeClassName='active' className='nav-link'>About US </Link></li>
+        <li><Link to='/'  activeclassname='active' className='nav-link'> Bank</Link></li>
+        <li><Link to='/mission'  activeclassname='active' className='nav-link'> Mission</Link></li>
+        <li><Link to='/account'  activeclassname='active' className='nav-link'> Account</Link></li>
+        <li><Link to='/loan'  activeclassname='active' className='nav-link'>Loan</Link></li>
+        <li><Link to='/investment'  activeclassname='active' className='nav-link'>Investment</Link></li>
+        <li><Link to='/aboutus'  activeclassname='active' className='nav-link'>About US </Link></li>
         
         
        
@@ -56,6 +57,10 @@ export default function Navbar() {
       e.preventDefault();
       window.location.href='/signup';
       }}>Sign Up</button></li>
+
+
+      <label className='hamburger' for="toggle">&#9776;</label>
+        <input type='checkbox' className='toggle' id='toggle'></input>
         </div>
 
 
@@ -65,10 +70,12 @@ export default function Navbar() {
       e.preventDefault();
       window.location.href='/logout';
       }}>Logout</button>
+
+      
             </div>
         )}
           
-
+           
         </nav>
     )
 }

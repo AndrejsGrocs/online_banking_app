@@ -37,7 +37,7 @@ export default function MainRouter() {
               <Route path='/login' element={<Login/>}/>
               <Route path='/signup' element={<SignUp/>}/>
               <Route path='/profile' element={<Profile/>}/>
-              <Route path='/transfer' element = {<MoneyTransfer/>}/>
+              {/* <Route path='/transfer' element = {<MoneyTransfer/>}/> */}
               <Route path='/logout' element={<Logout/>}/>
 
 
