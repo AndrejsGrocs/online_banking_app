@@ -15,6 +15,8 @@ export default function Navbar() {
         <div className='bank-logo-section'>
            <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg}></img>}</a>   
         </div>
+        
+       <div></div>
 
         <ul className='nav-list'>
         {loggedIn?( 
@@ -59,8 +61,7 @@ export default function Navbar() {
       }}>Sign Up</button></li>
 
 
-      <label className='hamburger' for="toggle">&#9776;</label>
-        <input type='checkbox' className='toggle' id='toggle'></input>
+    
         </div>
 
 
@@ -71,10 +72,12 @@ export default function Navbar() {
       window.location.href='/logout';
       }}>Logout</button>
 
-      
             </div>
         )}
           
+
+        <label className='hamburger' for="toggle">&#9776;</label>
+        <input type='checkbox' className='toggle' id='toggle'></input>
            
         </nav>
     )

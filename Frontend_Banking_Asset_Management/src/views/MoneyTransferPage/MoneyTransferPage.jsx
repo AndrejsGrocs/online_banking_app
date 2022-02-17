@@ -20,6 +20,7 @@ export default function MoneyTransfer(){
 
           const res = await axios.post('/api/user/transaction', data)
           console.log(res);
+          e.target.reset()
           setTransactionCompleted(true)
       }
     
