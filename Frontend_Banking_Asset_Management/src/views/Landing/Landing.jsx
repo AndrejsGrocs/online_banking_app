@@ -25,8 +25,8 @@ export default function Landing() {
                    {/* <img className='bannerImg' src={image3} /> */}
                      <div className='bannerContent'>
                      
-                       <h1 className="bannerHeader1">Save the Ocean Environment</h1>
-                       <p className="bannerText1">Open your environmental friendly account in just 5 minutes</p>
+                       <h1 className="bannerHeader1">Dolphin Bank.</h1>
+                       <p className="bannerText1">Because your money can do more.</p>
                        <button className='bannerButton1' type="button" onClick={(e) => {
       e.preventDefault();
       window.location.href='/signup';
