@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.use(passport.authenticate("jwt", { session: false }));
 
-router.post("/transaction", controller.transaction);
+router.patch("/transaction", controller.transaction);
 router.get("/history", controller.transactionHistory);
 
 module.exports = router;

@@ -15,12 +15,16 @@ exports.transaction = async (req, res) => {
       });
     }
 
-    const sender = await User.findByIdAndUpdate(req.user._id, {
-      accountBalance: transactionsMath.transactionSenderBalance(
-        req.user,
-        Number(body.transmittedValue)
-      ),
-    }).populate("firstname lastname");
+    const sender = await User.findByIdAndUpdate(
+      req.user._id,
+      {
+        accountBalance: transactionsMath.transactionSenderBalance(
+          req.user,
+          Number(body.transmittedValue)
+        ),
+      },
+      { new: true }
+    ).populate("firstname lastname");
 
     console.log(sender.accountBalance);
     console.log(body.transmittedValue);
@@ -29,12 +33,15 @@ exports.transaction = async (req, res) => {
       body.transmittedValue < sender.accountBalance &&
       body.transmittedValue > 0
     ) {
-      await recipient.updateOne({
-        accountBalance: transactionsMath.transactionRecipientBalance(
-          recipient,
-          Number(body.transmittedValue)
-        ),
-      });
+      await recipient.updateOne(
+        {
+          accountBalance: transactionsMath.transactionRecipientBalance(
+            recipient,
+            Number(body.transmittedValue)
+          ),
+        },
+        { new: true }
+      );
     } else {
       return res.status(400).json({
         message:
