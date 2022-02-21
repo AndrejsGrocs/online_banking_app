@@ -88,7 +88,10 @@ export default function SignUp() {
               <p className="forgot-password text-right">
                   Already registered 
               </p>
-              <button  to="/login" className='button-signup'>Login</button>
+              <button  onClick={(e) => {
+      e.preventDefault();
+      window.location.href='/login';
+      }}to="/login" className='button-signup'>Login</button>
   
         </form>
         </div>
