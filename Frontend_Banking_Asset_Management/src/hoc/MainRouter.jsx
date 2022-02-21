@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BrowserRouter as Router, Route ,Routes, Redirect, Link } from 'react-router-dom'
 import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
@@ -15,8 +15,13 @@ import Investment from '../views/InvestmentAssets/InvestmentAssets'
 import InvestmentPage from '../views/InvestmentPage/InvestmentPage'
 import LoanPage from '../views/LoanPage/LoanPage'
 import MoneyTransfer from '../views/MoneyTransferPage/MoneyTransferPage'
+import { AppContext } from '../App'
+import ProtectedRoute from '../components/Common/ProtectedRoute/ProtectedRoute'
 
 export default function MainRouter() {
+
+    const{loggedIn} = useContext(AppContext)
+
     return (
 
         <Router>
@@ -36,7 +41,8 @@ export default function MainRouter() {
               <Route path='/aboutus' element={<AboutUs/>}/>
               <Route path='/login' element={<Login/>}/>
               <Route path='/signup' element={<SignUp/>}/>
-              <Route path='/profile' element={<Profile/>}/>
+              <Route path='/profile' element={
+<ProtectedRoute auth={loggedIn}><Profile /></ProtectedRoute>}/>
               {/* <Route path='/transfer' element = {<MoneyTransfer/>}/> */}
               <Route path='/logout' element={<Logout/>}/>
 
