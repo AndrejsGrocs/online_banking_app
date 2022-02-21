@@ -14,11 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-cors({
-credentials: true,
-origin: true,
-})
-); 
+  cors({
+    credentials: true,
+    origin: true,
+  })
+);
 app.use(passport.initialize());
 
 const initializePassport = require("./passport-config");
@@ -40,8 +40,12 @@ mongoose
   });
 
 const userRoutes = require("./routes/userRoutes");
+const transactionRoutes = require("./routes/transactionRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 app.use("/api/user", userRoutes);
+app.use("/api/trans", transactionRoutes);
+app.use("/api/admin", adminRoutes);
 
 app.all("*", (req, res) => {
   res.status(500);
