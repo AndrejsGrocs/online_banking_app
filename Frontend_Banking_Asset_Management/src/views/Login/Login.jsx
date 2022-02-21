@@ -56,7 +56,7 @@ export default function Login() {
 
                <label>
                 
-                 <input className='input-login' name='pin' type='pin' placeholder='PIN' required={true}/>
+                 <input className='input-login' name='pin' type='password' placeholder='PIN' required={true}/>
                </label>
                  
                  <label>

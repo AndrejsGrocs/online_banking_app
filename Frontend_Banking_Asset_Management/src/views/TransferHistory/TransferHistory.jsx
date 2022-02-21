@@ -32,7 +32,7 @@ function TransactionHistory() {
                       setSeeHistory(false);
                       return
                   }
-                  const response = await axios.get('/api/user/history', {withCredentials:true})
+                  const response = await axios.get('/api/trans/history', {withCredentials:true})
 
                   console.log(response);
                   setSeeHistory(true)
