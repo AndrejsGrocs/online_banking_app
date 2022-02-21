@@ -1,11 +1,8 @@
 const { PinEncryptor } = require("pin-encryptor");
 const bcrypt = require("bcrypt");
 const User = require("./../models/User");
-const Transaction = require("./../models/Transaction");
 const authenticationHelper = require("./../helpers/authenticationHelper");
-const balanceMath = require("./../helpers/balanceMath");
 const accountNumberHelper = require("./../helpers/accountNumberHelper");
-const transactionsMath = require("./../helpers/transactionsMath");
 
 exports.registerUser = async (req, res) => {
   try {
