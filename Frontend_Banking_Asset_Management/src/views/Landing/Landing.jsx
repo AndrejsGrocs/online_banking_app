@@ -17,10 +17,10 @@ export default function Landing() {
       <div className="banner">
         {/* <img className='bannerImg' src={image3} /> */}
         <div className="bannerContent">
-          <h1 className="bannerHeader1">Save the Ocean Environment</h1>
+          <h1 className="bannerHeader1">Doplhin Bank</h1>
           <p className="bannerText1">
-            Open your environmental friendly account in just 5 minutes
-          </p>
+            Your money can Do more.
+          </p> 
           <button
             className="bannerButton1"
             type="button"
