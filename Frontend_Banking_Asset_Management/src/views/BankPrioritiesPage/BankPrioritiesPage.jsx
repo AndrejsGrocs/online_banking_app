@@ -6,7 +6,7 @@ export default function BankPrioritiesPage() {
     return (
         <div className='sectionContainer'>
         <div className='banner-3'>
-            <h1>Banner</h1>
+            <h1>We want change!</h1>
         </div>
          {/* <img className='bannerImg'
               src={image1}

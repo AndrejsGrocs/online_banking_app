@@ -41,3 +41,28 @@
   margin-left: auto;
   margin-right: 150px;
 }
+
+.acbutton1 {
+  background-color: #fbc78d;
+  color: #2a3d4f;
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 0 auto;
+  //margin-right: 150px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: #7777aa;
+    transition: all 0.5s;
+    border-radius: 30px;
+    //box-shadow: 0px 6px 15px #dbdbeb61;
+    //padding: 1.5rem 1.5rem 1.5rem 3rem;
+    color: #ffffff;
+  }
+}
