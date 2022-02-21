@@ -9,20 +9,27 @@ export const AppContext = createContext({
 });
 
 export default function App() {
+
   const [user, setUser] = useState({});
   const [recipient, setRecipient] = useState({});
   const [balance, setBalance] = useState();
 
   const [loggedIn, setLoggedIn] = useState("");
+
+ 
+
   const handleLogin = (_user) => {
     if (_user) {
       setUser(_user);
       setLoggedIn(true);
+      setBalance
     } else {
       setUser("");
       setLoggedIn(false);
     }
+
   };
+
   return (
     <AppContext.Provider
       value={{ handleLogin, loggedIn, user, balance, setBalance }}
@@ -33,3 +40,4 @@ export default function App() {
     </AppContext.Provider>
   );
 }
+

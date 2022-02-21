@@ -13,6 +13,7 @@ function TransactionHistory() {
             
             const {recipient} = useContext(AppContext)  */
 
+
   //Declaring state
 
   const [seeHistory, setSeeHistory] = useState(false);
@@ -68,6 +69,7 @@ function TransactionHistory() {
           )}
         </div>
         {/* <button className='section-button' type="button" onClick={(e) => {
+
       e.preventDefault();
       window.location.href='/mission';
       }}>Click Me!</button> */}

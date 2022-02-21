@@ -18,6 +18,7 @@ export default function MoneyTransfer() {
       transmittedValue: formData.get("transferamount"),
     };
 
+
     const res = await axios.patch("/api/trans/transaction", data);
     console.log(res.data.sender.accountBalance);
     setBalance(res.data.sender.accountBalance);
@@ -30,6 +31,7 @@ export default function MoneyTransfer() {
       {user != null ? (
         <>
           {/*      <div className="account-number">
+
             <p>Account Number</p>
             <p>{user.accountNumber}</p>
             </div>
