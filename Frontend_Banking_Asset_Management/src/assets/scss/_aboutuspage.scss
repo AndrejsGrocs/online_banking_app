@@ -28,24 +28,71 @@
 }
 
 .cardRobin {
+  position: relative;
+  text-align: center;
 }
 .cardAndrejs {
+  position: relative;
+  text-align: center;
 }
 
 .image-robin {
-  width: 80%;
   position: relative;
+  text-align: center;
+  width: 55%;
 }
 
 .image-andrejs {
-  width: 80%;
   position: relative;
+  text-align: center;
+  width: 55%;
+  // position: relative;
 }
 
-.about-us-card-header {
+.about-us-card-header-andrejs {
   position: absolute;
-  top: 500px;
-  right: 100;
-  width: 300px;
+  text-align: center;
+  margin-left: 120px;
+  padding-top: 20px;
+  font-weight: 800;
+}
+
+.about-us-card-header-robin {
+  position: absolute;
+  text-align: center;
+  margin-left: 120px;
+  padding-top: 20px;
+  font-weight: 800;
+}
+
+.aboutus-card-texts-links {
+  color: #2a3d4f;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  //right: 3%;
+  left: 40%;
+  //width: 300px;
   height: 100px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.aboutus-socmediaicon {
+  margin-top: 20px;
+  margin-right: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.about-us-card-text {
+  color: #2a3d4f;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+
+.socialmedia-icons-block {
+  margin-top: 10px;
+  margin-left: 70px;
 }
