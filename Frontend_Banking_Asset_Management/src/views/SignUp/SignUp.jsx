@@ -80,7 +80,7 @@ export default function SignUp() {
 
               
                   <label>
-                  <input type="PIN" name="PIN" className="input-login" placeholder="Enter PIN" />
+                  <input type="password" name="PIN" className="input-login" placeholder="Enter PIN" />
                 </label>
   
               <ErrorMessage isVisible={isError} errorMessage={errorMessage} />

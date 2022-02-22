@@ -4,7 +4,7 @@ import link from "../BankPrioritiesPage/BankPrioritiesPage"
 
 function BankPriorities() {
   return <div className='bank-priorities'>
-   <img className='section-image1'src={susecoimage} />
+   <img className='section-image1'src={susecoimage} alt='wind energy' />
    
             <div className='bppflex'>
             

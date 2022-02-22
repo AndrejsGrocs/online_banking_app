@@ -2,8 +2,8 @@ import React from 'react';
 
 function LoanPage() {
   return <div className='loan-page'>
-            <h1>Loan Page</h1>
-            <p>We are investing only in sustainable and eco projects.</p>
+            <h1>The page in under construction for now.</h1>
+            <p></p>
              
         </div>
 }

@@ -15,7 +15,7 @@ function CreditCards() {
       window.location.href='/account';
       }}>More Details</button>
             </div>
-            <img className='section-image2' src={creditcardimage} />
+            <img className='section-image2' src={creditcardimage} alt='dolphin bank credit card'/>
         </div>
 }
 

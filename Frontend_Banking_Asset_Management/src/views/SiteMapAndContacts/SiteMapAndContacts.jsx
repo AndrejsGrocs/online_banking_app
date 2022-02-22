@@ -11,11 +11,11 @@ function SiteMapAndContacts() {
              
 
              <div className='icon-list'>
-               <a href="mailto:info@dolphinbank.com" ><img className='socmediaicon' src={maillogo}></img></a>
-               <a href="https://www.instagram.com/" target="_blank"><img className= 'socmediaicon'   src={instalogo}></img></a>
-               <a href="https://web.telegram.org/z/" target="_blank"><img className= 'socmediaicon'   src={telegramlogo}></img></a>
-               <a href="https://www.linkedin.com/in/robin-skladny-647a1b229" target="_blank"><img className= 'socmediaicon'   src={linkedinlogo}></img></a>
-               <a href="https://de-de.facebook.com/" target="_blank"><img className= 'socmediaicon'   src={facebooklogo}></img></a>
+               <a href="mailto:info@dolphinbank.com" ><img className='socmediaicon' src={maillogo} alt='social media icon'></img></a>
+               <a href="https://www.instagram.com/" target="_blank"><img className= 'socmediaicon'   src={instalogo} alt='social media icon'></img></a>
+               <a href="https://web.telegram.org/z/" target="_blank"><img className= 'socmediaicon'   src={telegramlogo} alt='social media icon'></img></a>
+               <a href="https://www.linkedin.com/in/robin-skladny-647a1b229" target="_blank"><img className= 'socmediaicon'   src={linkedinlogo} alt='social media icon'></img></a>
+               <a href="https://de-de.facebook.com/" target="_blank"><img className= 'socmediaicon'  src={facebooklogo} alt='social media icon'></img></a>
               
                
                

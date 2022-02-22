@@ -14,7 +14,7 @@ function Investment() {
       window.location.href='/investment';
       }}>More Details</button>
             </div>
-            <img className='section-image1' src={susecoimage} />
+            <img className='section-image1' src={susecoimage} alt='park landscape picture from drone'/>
         </div>
 }
 

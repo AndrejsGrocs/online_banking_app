@@ -13,7 +13,7 @@ export default function Navbar() {
         <nav className='nav'>
         
         <div className='bank-logo-section'>
-           <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg}></img>}</a>   
+           <a className='bank-logo' href="/" >{<img className='nav-logo-img' src={logoimg} alt='dolphin bank logo'></img>}</a>   
         </div>
         
        <div></div>
